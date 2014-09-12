@@ -7,24 +7,15 @@
 
   <div id="menu">
     <div class="pure-menu pure-menu-open">
-      <a class="pure-menu-heading" href="#">GovWizely Explorer</a>
-
+      {{#link-to "index" class="pure-menu-heading"}}GovWizely Explorer{{/link-to}}
+      <h3>Available APIs</h3>
       <ul>
-        <li><a href="#">CSL</a></li>
-        <li class="menu-item-divided pure-menu-selected">
-          <a href="#">Trade Events</a>
-        </li>
+        <li>{{#link-to "consolidated-screening-list"}}CSL{{/link-to}}</li>
       </ul>
     </div>
   </div>
 
   <div id="main">
-    <div class="header">
-      <h1>Search Time...</h1>
-    </div>
-
-    <div class="content">
-      {{outlet}}
-    </div>
+    {{outlet}}
   </div>
 </div>

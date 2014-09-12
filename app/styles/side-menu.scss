@@ -29,15 +29,15 @@ This is the parent `<div>` that contains the menu and the content area.
 }
 #layout.active {
   position: relative;
-  left: 150px;
+  left: 250px;
 }
 #layout.active #menu {
-  left: 150px;
-  width: 150px;
+  left: 250px;
+  width: 250px;
 }
 
 #layout.active .menu-link {
-  left: 150px;
+  left: 250px;
 }
 /*
 The content `<div>` is where all your content goes.
@@ -83,8 +83,8 @@ appears on the left side of the page.
 */
 
 #menu {
-  margin-left: -150px; /* "#menu" width */
-  width: 150px;
+  margin-left: -250px; /* "#menu" width */
+  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,62 +93,50 @@ appears on the left side of the page.
   background: #191818;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-  /*
-  All anchors inside the menu should be styled like this.
-  */
-  #menu a {
+
+  h3 {
+    padding: 0.6em 0 0.6em 0.6em;
+    margin-bottom: 0;
+  }
+
+  a {
     color: #999;
     border: none;
     padding: 0.6em 0 0.6em 0.6em;
   }
 
-  /*
-  Remove all background/borders, since we are applying them to #menu.
-  */
-   #menu .pure-menu,
-   #menu .pure-menu ul {
+  .pure-menu {
     border: none;
     background: transparent;
-  }
-
-  /*
-  Add that light border to separate items into groups.
-  */
-  #menu .pure-menu ul,
-  #menu .pure-menu .menu-item-divided {
-    border-top: 1px solid #333;
-  }
-    /*
-    Change color of the anchor links on hover/focus.
-    */
-    #menu .pure-menu li a:hover,
-    #menu .pure-menu li a:focus {
-      background: #333;
+    ul {
+      border: none;
+      background: transparent;
+      border-top: 1px solid #333;
+      li {
+        a {
+          &:hover, &:focus {
+            background: #333;
+          }
+        }
+      }
     }
+    .menu-item-divided {
+      border-top: 1px solid #333;
+    }
+  }
 
-  /*
-  This styles the selected menu item `<li>`.
-  */
-  #menu .pure-menu-selected,
-  #menu .pure-menu-heading {
+  a.active {
     background: #1f8dd6;
+    color: #fff;
   }
-    /*
-    This styles a link within a selected menu item `<li>`.
-    */
-    #menu .pure-menu-selected a {
-      color: #fff;
-    }
 
-  /*
-  This styles the menu heading.
-  */
-  #menu .pure-menu-heading {
+  .pure-menu-heading {
+    background: #1f8dd6;
     font-size: 110%;
     color: #fff;
     margin: 0;
   }
+}
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
@@ -219,20 +207,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   }
 
   #layout {
-    padding-left: 150px; /* left col width "#menu" */
+    padding-left: 250px; /* left col width "#menu" */
     left: 0;
   }
   #menu {
-    left: 150px;
+    left: 250px;
   }
 
   .menu-link {
     position: fixed;
-    left: 150px;
+    left: 250px;
     display: none;
   }
 
   #layout.active .menu-link {
-    left: 150px;
+    left: 250px;
   }
 }
