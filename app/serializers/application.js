@@ -14,18 +14,8 @@ export default DS.JSONSerializer.extend({
   },
 
   extractMeta: function(store, type, payload) {
-    if (payload && payload.total) {
+    if (payload) {
       store.metaForType(type, {total: payload.total});
     }
   }
-
-  //normalize: function(type, hash) {
-    ////Returns: Object
-  //},
-
-  //normalizePayload: function(payload) {
-    //delete payload.total;
-    //delete payload.offset;
-    //return payload.results;
-  //}
 });

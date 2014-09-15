@@ -1,0 +1,9 @@
+<label for="countries">Countries</label>
+{{view Ember.Select
+  content=countryList
+  value=value
+  optionValuePath="content.value"
+  optionLabelPath="content.text"
+  id="countries"
+  class="pure-input-1"
+  multiple="multiple"}}

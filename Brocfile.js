@@ -18,5 +18,9 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/pure/pure-min.css');
+app.import('bower_components/pure/grids-responsive-min.css');
+
+app.import('bower_components/select2/select2.js');
+app.import('bower_components/select2/select2.css');
 
 module.exports = app.toTree();
