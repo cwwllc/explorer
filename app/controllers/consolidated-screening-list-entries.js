@@ -20,9 +20,7 @@ export default Ember.ArrayController.extend({
       this.set('countries', this.get('countriesField'));
       this.set('sources', this.get('sourcesField'));
       this.set('sdnType', this.get('sdnTypeField'));
-      if (page) {
-        this.set('page', page);
-      }
+      this.set('page', (page || 1));
     }
   },
 
@@ -31,12 +29,30 @@ export default Ember.ArrayController.extend({
     return total;
   }.property('model'),
 
-  pages: function() {
-    var last = Math.max(Math.ceil(this.get('total') / 10), 1);
-    var pages = [];
-    for (var i = 1; i <= last; i += 1) {
-      pages.push(i);
+  lastPage: function() {
+    return Math.max(Math.ceil(this.get('total') / 10), 1);
+  }.property('total'),
+
+  pagesInfo: function() {
+    var page = parseInt(this.get('page')),
+      lastPage = this.get('lastPage'),
+      rangeStart = Math.max(1, (page - 5)),
+      rangeEnd = Math.min(lastPage, (page + 5)),
+      pages = [];
+
+
+    if (lastPage > 1) {
+      if (rangeStart > 1) {
+        pages.push({page: 1, isCurrent: (page === 1), text: 'First'});
+      }
+      for (var i = rangeStart; i <= rangeEnd; i += 1) {
+        pages.push({page: i, isCurrent: (i === page), text: i});
+      }
+      if (rangeEnd < lastPage) {
+        pages.push({page: lastPage, isCurrent: (page === lastPage), text: 'Last'});
+      }
     }
+
     return pages;
-  }.property('model')
+  }.property('total')
 });
