@@ -15,7 +15,7 @@ export default DS.RESTAdapter.extend({
     throw new Error("deleteRecord() not implemented.");
   },
 
-  host: 'http://localhost:3000',
+  host: 'http://api.govwizely.com',
 
   findAll: function() {
     var all = this.ajax(this.get('host') + '/consolidated_screening_list/search', 'GET');
