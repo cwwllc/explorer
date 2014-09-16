@@ -25,7 +25,7 @@ export default Ember.ArrayController.extend({
   sdnType: null,
   sdnTypeField: Ember.computed.oneWay('sdnType'),
 
-  page: null,
+  page: 1,
   pageField: Ember.computed.oneWay('pageField'),
 
   actions: {
@@ -57,7 +57,6 @@ export default Ember.ArrayController.extend({
       rangeStart = Math.max(1, (page - 5)),
       rangeEnd = Math.min(lastPage, (page + 5)),
       pages = [];
-
 
     if (lastPage > 1) {
       if (rangeStart > 1) {
