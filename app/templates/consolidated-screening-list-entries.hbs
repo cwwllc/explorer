@@ -16,7 +16,7 @@
           {{sdn-type-field sdnTypeField=sdnTypeField}}
         </div>
         <div class="pure-u-1 pure-u-md-1">
-          {{input type="submit" value="Search" class="pure-u-1-5 pure-button pure-button-primary"}}
+          {{input type="submit" value="Search" class="pure-u-1-5 pure-u-md-1-5 pure-button pure-button-primary"}}
         </div>
       </div>
     </fieldset>
@@ -28,11 +28,11 @@
     <p>No results.</p>
   {{/if}}
 
-  <ul>
-  {{#each}}
-    <li>Name: {{name}}, source: {{source}}</li>
-  {{/each}}
-  </ul>
+  <div id="search-results">
+    {{#each document in content}}
+      {{search-result document=document}}
+    {{/each}}
+  </div>
 
   <div class="pages">
     {{#each page in pagesInfo}}
