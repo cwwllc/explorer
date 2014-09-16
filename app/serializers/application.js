@@ -2,15 +2,13 @@ import DS from 'ember-data';
 
 export default DS.JSONSerializer.extend({
 
-  extractArray: function(store, type, payload, id, requestType) {
-    var payload = payload.results ? payload.results : payload;
-
-    return payload.map(function(json) {
+  extractArray: function(store, type, payload) {
+    return payload.results.map(function(json) {
       return this.extractSingle(store, type, json);
     }, this);
   },
 
-  extractSingle: function(store, type, payload, id, requestType) {
+  extractSingle: function(store, type, payload) {
     payload.id = payload.source + payload.name + payload.federal_register_notice + payload.start_date + payload.end_date;
 
     var arrayFields = ['alt_names', 'nationalities', 'citizenships', 'dates_of_birth', 'places_of_birth'];
