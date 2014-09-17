@@ -3,7 +3,6 @@
 module.exports = function(environment) {
   var ENV = {
     environment: environment,
-    baseURL: '/explorer',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -31,7 +30,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/explorer';
+    ENV.locationType = 'hash';
   }
 
   return ENV;
