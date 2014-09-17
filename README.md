@@ -11,3 +11,7 @@ This project uses [ember-cli](http://ember-cli.com). The [cloning an existing pr
 2. Install `node`.
 3. `cd explorer && npm install && bower install`
 4. `ember server`
+
+## Deployment
+
+Run `sh deploy.sh`. You must have push access to this repository in order to do deployments.
