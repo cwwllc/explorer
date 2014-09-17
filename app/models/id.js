@@ -7,5 +7,5 @@ export default DS.Model.extend({
   issue_date: DS.attr('string'),
   expiration_date: DS.attr('string'),
 
-  consolidatedScreeningListEntry: DS.belongsTo('consolidatedScreeningListEntry')
+  consolidatedScreeningListEntry: DS.belongsTo('consolidated-screening-list-entry')
 });

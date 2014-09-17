@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForComponent('sdn-types-field', 'SdnTypesFieldComponent', {
+moduleForComponent('sdn-type-field', 'SdnTypeFieldComponent', {
   // specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar']
 });

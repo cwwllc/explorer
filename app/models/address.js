@@ -7,5 +7,5 @@ export default DS.Model.extend({
   postal_code: DS.attr('string'),
   country: DS.attr('string'),
 
-  consolidatedScreeningListEntry: DS.belongsTo('consolidatedScreeningListEntry')
+  consolidatedScreeningListEntry: DS.belongsTo('consolidated-screening-list-entry')
 });
