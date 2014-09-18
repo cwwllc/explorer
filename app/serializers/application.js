@@ -29,7 +29,7 @@ export default DS.JSONSerializer.extend({
     if (payload.ids) {
       payload.ids = payload.ids.map(function(id) {
         id.id = id.type + id.number + id.country + id.issue_date + id.expiration_date;
-        store.push('id', id);
+        store.push('identification', id);
         return id.id;
       });
     }

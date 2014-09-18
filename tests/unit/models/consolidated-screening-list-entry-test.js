@@ -4,11 +4,11 @@ import {
 } from 'ember-qunit';
 
 import Address from "explorer/models/address";
-import Id from "explorer/models/id";
+import Identification from "explorer/models/identification";
 
 moduleForModel('consolidated-screening-list-entry', 'ConsolidatedScreeningListEntry', {
   // Specify the other units that are required for this test.
-  needs: ['model:address', 'model:id']
+  needs: ['model:address', 'model:identification']
 });
 
 test('it exists', function() {

@@ -29,5 +29,5 @@ export default DS.Model.extend({
   places_of_birth: DS.attr('string'),
 
   addresses: DS.hasMany('address'),
-  ids: DS.hasMany('id')
+  identifications: DS.hasMany('identification')
 });

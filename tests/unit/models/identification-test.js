@@ -5,7 +5,7 @@ import {
 
 import ConsolidatedScreeningListEntry from "explorer/models/consolidated-screening-list-entry";
 
-moduleForModel('id', 'Id', {
+moduleForModel('identification', 'Identification', {
   // Specify the other units that are required for this test.
   needs: ['model:consolidated-screening-list-entry']
 });
