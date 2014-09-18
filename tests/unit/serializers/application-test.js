@@ -30,17 +30,25 @@ test('extractArray', function() {
 });
 
 
-test('extractSingle: name and alt_names', function() {
+test('extractSingle: array attributes', function() {
   var serializer = this.subject();
 
   var payload = {
-    name: 'Foobius Barius',
-    alt_names: ['Fubar', 'Foo to the Bar']};
+    name:            'Foobius Barius',
+    alt_names:       ['Fubar', 'Foo to the Bar'],
+    nationalities:   ['US'],
+    citizenships:    [],
+    dates_of_birth:  ['2013-12-25', '1988-08-08'],
+    places_of_birth: ['GB', 'FR']};
 
   var expected = {
-    name: "Foobius Barius",
-    alt_names: "Fubar, Foo to the Bar",
-    id: "undefinedFoobius Bariusundefinedundefinedundefined"};
+    name:            'Foobius Barius',
+    alt_names:       ['Fubar', 'Foo to the Bar'],
+    nationalities:   ['US'],
+    citizenships:    [],
+    dates_of_birth:  ['2013-12-25', '1988-08-08'],
+    places_of_birth: ['GB', 'FR'],
+    id:              "undefinedFoobius Bariusundefinedundefinedundefined"};
 
   var extracted = serializer.extractSingle({}, 'N/A', payload);
   deepEqual(extracted, expected);

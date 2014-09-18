@@ -60,21 +60,11 @@
         <tr><td>Source List URL</td><td><a href="{{unbound source_list_url}}" target="_blank">{{source_list_url}}</a></td></tr>
       {{/if}}
 
-      {{#if alt_names}}
-        <tr><td>Alternative Names</td><td>{{alt_names}}</td></tr>
-      {{/if}}
-      {{#if nationalities}}
-        <tr><td>Nationalities</td><td>{{nationalities}}</td></tr>
-      {{/if}}
-      {{#if citizenships}}
-        <tr><td>Citizenships</td><td>{{citizenships}}</td></tr>
-      {{/if}}
-      {{#if dates_of_birth}}
-        <tr><td>Dates of Birth</td><td>{{dates_of_birth}}</td></tr>
-      {{/if}}
-      {{#if places_of_birth}}
-        <tr><td>Places of Birth</td><td>{{places_of_birth}}</td></tr>
-      {{/if}}
+      {{search-result-row-list label="Alternative Names" items=alt_names}}
+      {{search-result-row-list label="Nationalities" items=nationalities}}
+      {{search-result-row-list label="Citizenships" items=citizenships}}
+      {{search-result-row-list label="Dates of Birth" items=dates_of_birth}}
+      {{search-result-row-list label="Places of Birth" items=places_of_birth}}
 
       {{#if addresses}}
         <tr><td>Addresses</td><td>

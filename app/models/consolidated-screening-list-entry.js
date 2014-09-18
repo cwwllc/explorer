@@ -22,11 +22,11 @@ export default DS.Model.extend({
   remarks: DS.attr('string'),
   source_list_url: DS.attr('string'),
 
-  alt_names: DS.attr('string'),
-  nationalities: DS.attr('string'),
-  citizenships: DS.attr('string'),
-  dates_of_birth: DS.attr('string'),
-  places_of_birth: DS.attr('string'),
+  alt_names: DS.attr('array'),
+  nationalities: DS.attr('array'),
+  citizenships: DS.attr('array'),
+  dates_of_birth: DS.attr('array'),
+  places_of_birth: DS.attr('array'),
 
   addresses: DS.hasMany('address'),
   identifications: DS.hasMany('identification')

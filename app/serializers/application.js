@@ -11,13 +11,6 @@ export default DS.JSONSerializer.extend({
   extractSingle: function(store, type, payload) {
     payload.id = payload.source + payload.name + payload.federal_register_notice + payload.start_date + payload.end_date;
 
-    var arrayFields = ['alt_names', 'nationalities', 'citizenships', 'dates_of_birth', 'places_of_birth'];
-    arrayFields.forEach(function(field) {
-      if (payload[field]) {
-        payload[field] = payload[field].join(', ');
-      }
-    });
-
     if (payload.addresses) {
       payload.addresses = payload.addresses.map(function(a) {
         a.id = a.address + a.city + a.state + a.postal_code + a.country;
