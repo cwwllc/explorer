@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import ENV from 'explorer/config/environment';
 
 export default DS.RESTAdapter.extend({
 
@@ -15,10 +16,8 @@ export default DS.RESTAdapter.extend({
     throw new Error("deleteRecord() not implemented.");
   },
 
-  host: 'http://api.govwizely.com',
-
   findAll: function() {
-    var all = this.ajax(this.get('host') + '/consolidated_screening_list/search', 'GET');
+    var all = this.ajax(ENV.webservicesBaseURL + '/consolidated_screening_list/search', 'GET');
     return all;
   },
   findQuery: function(store, type, query) {
@@ -33,7 +32,7 @@ export default DS.RESTAdapter.extend({
       }
     }
 
-    url = this.get('host') + '/consolidated_screening_list/search?'+params.join('&');
+    url = ENV.webservicesBaseURL + '/consolidated_screening_list/search?' + params.join('&');
 
     return this.ajax(url, 'GET');
   },

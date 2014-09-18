@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     environment: environment,
     locationType: 'auto',
+    webservicesBaseURL: 'http://localhost:3000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -32,6 +33,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.baseURL = '/explorer';
     ENV.locationType = 'hash';
+    ENV.webservicesBaseURL = 'http://api.govwizely.com';
   }
 
   return ENV;
