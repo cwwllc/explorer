@@ -22,11 +22,7 @@
     </fieldset>
   </form>
 
-  {{#if total}}
-    <p>{{total}} results:</p>
-  {{else}}
-    <p>No results.</p>
-  {{/if}}
+  {{total-results total=total}}
 
   <div id="search-results">
     {{#each document in content}}
