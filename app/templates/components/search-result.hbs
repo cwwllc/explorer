@@ -11,9 +11,6 @@
       {{#if sdn_type}}
         <tr><td>SDN Type</td><td>{{sdn_type}}</td></tr>
       {{/if}}
-      {{#if programs}}
-        <tr><td>Programs</td><td>{{programs}}</td></tr>
-      {{/if}}
       {{#if title}}
         <tr><td>Title</td><td>{{title}}</td></tr>
       {{/if}}
@@ -60,6 +57,7 @@
         <tr><td>Source List URL</td><td><a href="{{unbound source_list_url}}" target="_blank">{{source_list_url}}</a></td></tr>
       {{/if}}
 
+      {{search-result-row-list label="Programs" items=programs}}
       {{search-result-row-list label="Alternative Names" items=alt_names}}
       {{search-result-row-list label="Nationalities" items=nationalities}}
       {{search-result-row-list label="Citizenships" items=citizenships}}

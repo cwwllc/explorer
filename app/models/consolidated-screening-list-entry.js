@@ -5,7 +5,6 @@ export default DS.Model.extend({
   source: DS.attr('string'),
   entity_number: DS.attr('string'),
   sdn_type: DS.attr('string'),
-  programs: DS.attr('string'),
   title: DS.attr('string'),
   federal_register_notice: DS.attr('string'),
   start_date: DS.attr('string'),
@@ -27,6 +26,7 @@ export default DS.Model.extend({
   citizenships: DS.attr('array'),
   dates_of_birth: DS.attr('array'),
   places_of_birth: DS.attr('array'),
+  programs: DS.attr('array'),
 
   addresses: DS.hasMany('address'),
   identifications: DS.hasMany('identification')
