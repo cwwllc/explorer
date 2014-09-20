@@ -5,7 +5,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('consolidated-screening-list-entries');
+  this.resource('consolidated-screening-list-entries', function(){});
 });
 
 export default Router;

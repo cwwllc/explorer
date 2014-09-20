@@ -10,13 +10,17 @@ export default Ember.Route.extend({
     page: { refreshModel: true }
   },
 
-  model: function(params) {
-    return this.store.find('consolidated-screening-list-entry', {
-      q: params.q,
-      countries: params.countries,
-      sources: params.sources,
-      sdn_type: params.sdnType,
-      page: params.page
-    });
+  actions: {
+    search: function(page) {
+      this.controller.set('q', this.controller.get('qField'));
+      this.controller.set('sources', this.controller.get('sourcesField'));
+      this.controller.set('sdnType', this.controller.get('sdnTypeField'));
+
+      this.controller.set('countries', this.controller.get('countriesField').map(function(item) {
+        return item.value;
+      }));
+
+      this.controller.set('page', (page || 1));
+    }
   }
 });
