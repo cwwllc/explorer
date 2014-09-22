@@ -12,5 +12,6 @@ cd dist
 cp -r `ls -1 | grep -v -E 'test'` ../deploy
 
 cd ../deploy
-git commit -am 'Updated.'
+git add .
+git commit -m 'Updated.'
 git push origin gh-pages
