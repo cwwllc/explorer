@@ -6,4 +6,6 @@ $(function() {
 
     return false;
   });
+
+  $('#countries, #sources, #sdn-type').select2();
 });
