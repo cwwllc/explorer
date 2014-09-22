@@ -12,14 +12,30 @@ export default Ember.Route.extend({
 
   actions: {
     search: function(page) {
+
+      var countries,
+        sources,
+        countriesField = this.controller.get('countriesField'),
+        sourcesField = this.controller.get('sourcesField'),
+        sdnTypeField = this.controller.get('sdnTypeField');
+
+      if (countriesField) {
+        countries = countriesField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('countries', countries);
+
+      if (sourcesField) {
+        sources = sourcesField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('sources', sources);
+
+      this.controller.set('sdnType', sdnTypeField.value);
+
       this.controller.set('q', this.controller.get('qField'));
-      this.controller.set('sources', this.controller.get('sourcesField'));
-      this.controller.set('sdnType', this.controller.get('sdnTypeField'));
-
-      this.controller.set('countries', this.controller.get('countriesField').map(function(item) {
-        return item.value;
-      }));
-
       this.controller.set('page', (page || 1));
     }
   }
