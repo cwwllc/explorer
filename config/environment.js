@@ -5,6 +5,7 @@ module.exports = function(environment) {
     environment: environment,
     locationType: 'auto',
     webservicesBaseURL: 'http://localhost:3000',
+    appTitle: 'GovWizely Explorer',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
