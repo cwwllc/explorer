@@ -6,18 +6,15 @@ export default Ember.Route.extend({
     q: { refreshModel: true },
     countries: { refreshModel: true },
     sources: { refreshModel: true },
-    sdnType: { refreshModel: true },
     page: { refreshModel: true }
   },
 
   actions: {
     search: function(page) {
-
       var countries,
         sources,
         countriesField = this.controller.get('countriesField'),
-        sourcesField = this.controller.get('sourcesField'),
-        sdnTypeField = this.controller.get('sdnTypeField');
+        sourcesField = this.controller.get('sourcesField');
 
       if (countriesField) {
         countries = countriesField.map(function(item) {
@@ -32,8 +29,6 @@ export default Ember.Route.extend({
         });
       }
       this.controller.set('sources', sources);
-
-      this.controller.set('sdnType', sdnTypeField.value);
 
       this.controller.set('q', this.controller.get('qField'));
       this.controller.set('page', (page || 1));

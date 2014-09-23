@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  queryParams: ['q', 'countries', 'sources', 'sdnType', 'page'],
+  queryParams: ['q', 'countries', 'sources', 'page'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
@@ -28,23 +28,9 @@ export default Ember.ArrayController.extend({
     return selected;
   }.property('sources'),
 
-  sdnType: null,
-  sdnTypeField: function() {
-    var sdnType = this.get('sdnType');
-    return this.get('sdnTypeList').find(function(item) {
-      return (item.value === sdnType);
-    });
-  }.property('sdnType'),
-
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
 
-  sdnTypeList: [
-    {value: null,         label: 'All'},
-    {value: 'Entity',     label: 'Entity'},
-    {value: 'Individual', label: 'Individual'},
-    {value: 'Vessel',     label: 'Vessel'}
-  ],
   sourceList: [
     {value: 'DPL', label: 'DPL'},
     {value: 'DTC', label: 'DTC'},
