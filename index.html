@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GovWizely Explorer</title>
+    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A simple app allowing users to explore the GovWizely webservices API.">
 
@@ -14,8 +14,9 @@
   </head>
   <body>
     <script>
-      window.ExplorerENV = {"environment":"production","locationType":"hash","webservicesBaseURL":"http://api.govwizely.com","EmberENV":{"FEATURES":{}},"APP":{},"baseURL":"/explorer"};
+      window.ExplorerENV = {"environment":"production","locationType":"hash","webservicesBaseURL":"http://api.govwizely.com","appTitle":"GovWizely Explorer","EmberENV":{"FEATURES":{}},"APP":{},"baseURL":"/explorer"};
       window.EmberENV = window.ExplorerENV.EmberENV;
+      document.title = window.ExplorerENV.appTitle;
     </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/explorer.js"></script>
