@@ -46,13 +46,13 @@ export default Ember.ArrayController.extend({
     {value: 'Vessel',     label: 'Vessel'}
   ],
   sourceList: [
-    {value: 'SDN', label: 'SDN'},
-    {value: 'FSE', label: 'FSE'},
-    {value: 'EL',  label: 'EL'},
-    {value: 'ISN', label: 'ISN'},
-    {value: 'UVL', label: 'UVL'},
     {value: 'DPL', label: 'DPL'},
-    {value: 'DTC', label: 'DTC'}
+    {value: 'DTC', label: 'DTC'},
+    {value: 'EL',  label: 'EL'},
+    {value: 'FSE', label: 'FSE'},
+    {value: 'ISN', label: 'ISN'},
+    {value: 'SDN', label: 'SDN'},
+    {value: 'UVL', label: 'UVL'}
   ],
   countryList: [
     {label: 'Afghanistan', value: 'AF'},
