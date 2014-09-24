@@ -32,14 +32,15 @@ export default Ember.ArrayController.extend({
   pageField: Ember.computed.oneWay('pageField'),
 
   sourceList: [
-    {value: 'DPL', label: 'DPL'},
-    {value: 'DTC', label: 'DTC'},
-    {value: 'EL',  label: 'EL'},
-    {value: 'FSE', label: 'FSE'},
-    {value: 'ISN', label: 'ISN'},
-    {value: 'SDN', label: 'SDN'},
-    {value: 'UVL', label: 'UVL'}
+    {value: 'DTC', label: 'AECA Debarred List (DTC)'},
+    {value: 'DPL', label: 'Denied Persons List (DPL)'},
+    {value: 'EL',  label: 'Entity List (EL)'},
+    {value: 'FSE', label: 'Foreign Sanctions Evaders List (FSE)'},
+    {value: 'ISN', label: 'Nonproliferation Sanctions (ISN)'},
+    {value: 'SDN', label: 'Special Designated Nationals List (SDN)'},
+    {value: 'UVL', label: 'Unverified List (UVL)'}
   ],
+
   countryList: [
     {label: 'Afghanistan', value: 'AF'},
     {label: 'Åland', value: 'AX'},
