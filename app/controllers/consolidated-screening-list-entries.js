@@ -37,6 +37,8 @@ export default Ember.ArrayController.extend({
     {value: 'EL',  label: 'Entity List (EL)'},
     {value: 'FSE', label: 'Foreign Sanctions Evaders List (FSE)'},
     {value: 'ISN', label: 'Nonproliferation Sanctions (ISN)'},
+    {value: 'PLC', label: 'Palestinian Legislative Council List (PLC)'},
+    {value: 'SSI', label: 'Sectoral Sanctions Identifications List (SSI)'},
     {value: 'SDN', label: 'Special Designated Nationals List (SDN)'},
     {value: 'UVL', label: 'Unverified List (UVL)'}
   ],

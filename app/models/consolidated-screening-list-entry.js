@@ -5,6 +5,7 @@ export default DS.Model.extend({
   source: DS.attr('string'),
   entity_number: DS.attr('string'),
   sdn_type: DS.attr('string'),
+  nsp_type: DS.attr('string'),
   title: DS.attr('string'),
   federal_register_notice: DS.attr('string'),
   start_date: DS.attr('string'),
