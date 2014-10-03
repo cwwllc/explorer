@@ -16,15 +16,46 @@ export default DS.RESTAdapter.extend({
     throw new Error("deleteRecord() not implemented.");
   },
 
-  findAll: function() {
-    var all = this.ajax(ENV.webservicesBaseURL + '/consolidated_screening_list/search', 'GET');
-    return all;
+  findAll: function(store, type) {
+    return this.ajax(this.buildUrl(type, {}), 'GET');
   },
+
   findQuery: function(store, type, query) {
-    var page = (query.page > 1) ? query.page : 1;
-    var offset = 10 * (page - 1);
-    var params = ['offset='+offset];
-    var key, url;
+    return this.ajax(this.buildUrl(type, query), 'GET');
+  },
+
+  buildUrl: function(type, query) {
+    if (!query) {
+      query = {page: 0};
+    }
+    var page = Math.max(query.page, 1),
+      offset = 10 * (page - 1);
+
+    delete query.page;
+
+    return ENV.webservicesBaseURL + this.path(type) + this.queryString(offset, query);
+  },
+
+  path: function(type) {
+    var supported = {
+      'explorer@model:consolidated-screening-list-entry:': 'consolidated_screening_list',
+      'explorer@model:parature-faq-entry:': 'parature_faq',
+    };
+    var path = supported[type];
+
+    if (!path) {
+      throw new Error('Type "'+type+'" not supported');
+    }
+
+    return '/' + path + '/search';
+  },
+
+  queryString: function(offset, query) {
+    var params = [], key;
+
+    if (offset > 0) {
+      params.push('offset='+offset);
+    }
 
     for (key in query) {
       if (query[key] && query[key] !== 'undefined') {
@@ -32,8 +63,6 @@ export default DS.RESTAdapter.extend({
       }
     }
 
-    url = ENV.webservicesBaseURL + '/consolidated_screening_list/search?' + params.join('&');
-
-    return this.ajax(url, 'GET');
+    return ((params.length > 0) ? '?' + params.join('&') : '');
   },
 });
