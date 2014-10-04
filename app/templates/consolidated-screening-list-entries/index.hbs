@@ -7,11 +7,25 @@
 </div>
 
 <div class="pages">
-  {{#each page in pagesInfo}}
-    {{#if page.isCurrent}}
-      <button class="pure-button pure-button-disabled">{{page.text}}</button>
+  <ul class="pure-paginator">
+    {{#if prevPage}}
+      <li><a class="pure-button" {{action "search" prevPage}}>&#171;</a></li>
     {{else}}
-      <button class="pure-button" {{action "search" page.page}}>{{page.text}}</button>
+      <li class="pure-button pure-button-disabled">&#171;</a</li>
     {{/if}}
-  {{/each}}
+
+    {{#each page in pagesInfo}}
+      {{#if page.isCurrent}}
+        <li class="pure-button pure-button-active">{{page.text}}</li>
+      {{else}}
+        <li><a class="pure-button" {{action "search" page.page}}>{{page.text}}</a></li>
+      {{/if}}
+    {{/each}}
+
+    {{#if nextPage}}
+      <li><a class="pure-button" {{action "search" nextPage}}>&#187;</a></li>
+    {{else}}
+      <li class="pure-button pure-button-disabled">&#187;</li>
+    {{/if}}
+  </ul>
 </div>
