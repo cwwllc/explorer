@@ -14,22 +14,27 @@ export default Ember.ArrayController.extend({
     return Math.max(Math.ceil(this.get('total') / 10), 1);
   }.property('total'),
 
+  prevPage: function() {
+    var page = this.get('page');
+    return ((page === 1) ? null : (page - 1));
+  }.property('total'),
+
+  nextPage: function() {
+    var page = this.get('page'),
+      lastPage = this.get('lastPage');
+    return ((page === lastPage) ? null : (page + 1));
+  }.property('total'),
+
   pagesInfo: function() {
     var page = parseInt(this.get('page')),
       lastPage = this.get('lastPage'),
-      rangeStart = Math.max(1, (page - 5)),
-      rangeEnd = Math.min(lastPage, (page + 5)),
+      rangeStart = Math.max(1, (page - 4)),
+      rangeEnd = Math.min(lastPage, (rangeStart + 9)),
       pages = [];
 
     if (lastPage > 1) {
-      if (rangeStart > 1) {
-        pages.push({page: 1, isCurrent: (page === 1), text: 'First'});
-      }
       for (var i = rangeStart; i <= rangeEnd; i += 1) {
         pages.push({page: i, isCurrent: (i === page), text: i});
-      }
-      if (rangeEnd < lastPage) {
-        pages.push({page: lastPage, isCurrent: (page === lastPage), text: 'Last'});
       }
     }
 
