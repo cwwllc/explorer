@@ -10,32 +10,7 @@ test('it exists', function() {
   ok(adapter);
 });
 
-test('buildUrl: query arguments', function() {
-  var adapter = this.subject(),
-    type = 'explorer@model:consolidated-screening-list-entry:';
-  equal(
-    adapter.buildUrl(type, {}),
-    'http://localhost:3000/consolidated_screening_list/search'
-  );
-
-  equal(
-    adapter.buildUrl(type, {page: 2}),
-    'http://localhost:3000/consolidated_screening_list/search?offset=10'
-  );
-});
-
-test('buildUrl: supported model types', function() {
-  var adapter = this.subject(),
-    type = 'explorer@model:parature-faq-entry:';
-  equal(
-    adapter.buildUrl(type, {}),
-    'http://localhost:3000/parature_faq/search'
-  );
-
-  throws(
-    function() {
-      adapter.buildUrl('foo-bar', {});
-    },
-    new Error('Type "foo-bar" not supported')
-  );
+test('pathForType', function() {
+  var adapter = this.subject();
+  equal(adapter.pathForType('FooBarEntry'), 'foo_bar/search');
 });

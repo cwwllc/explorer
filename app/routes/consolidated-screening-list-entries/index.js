@@ -10,7 +10,14 @@ export default Ember.Route.extend({
       q: p.q,
       countries: p.countries,
       sources: p.sources,
-      page: p.page
+      offset: this.offset(p.page)
     });
+  },
+
+  offset: function(page) {
+    if (isNaN(page) || page < 1) {
+      page = 1;
+    }
+    return (10 * (page - 1));
   }
 });
