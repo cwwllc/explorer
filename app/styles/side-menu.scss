@@ -90,7 +90,7 @@ appears on the left side of the page.
   left: 0;
   bottom: 0;
   z-index: 1000; /* so the menu or its navicon stays above all content */
-  background: #191818;
+  background: #f1f1f1;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
@@ -126,15 +126,16 @@ appears on the left side of the page.
   }
 
   a.active {
-    background: #1f8dd6;
+    background: #0B5394;
     color: #fff;
   }
 
   .pure-menu-heading {
-    background: #1f8dd6;
-    font-size: 110%;
+    background: #0B5394;
+    font-size: 160%;
     color: #fff;
     margin: 0;
+    text-align: center;
   }
 }
 
