@@ -8,8 +8,8 @@
       {{#if entity_number}}
         <tr><td>Entity Number</td><td>{{entity_number}}</td></tr>
       {{/if}}
-      {{#if sdn_type}}
-        <tr><td>SDN Type</td><td>{{sdn_type}}</td></tr>
+      {{#if type}}
+        <tr><td>Type</td><td>{{type}}</td></tr>
       {{/if}}
       {{#if title}}
         <tr><td>Title</td><td>{{title}}</td></tr>
@@ -55,6 +55,9 @@
       {{/if}}
       {{#if source_list_url}}
         <tr><td>Source List URL</td><td><a href="{{unbound source_list_url}}" target="_blank">{{source_list_url}}</a></td></tr>
+      {{/if}}
+      {{#if source_information_url}}
+        <tr><td>Source Information URL</td><td><a href="{{unbound source_information_url}}" target="_blank">{{source_information_url}}</a></td></tr>
       {{/if}}
 
       {{search-result-row-list label="Programs" items=programs}}
