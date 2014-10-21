@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Select.extend({
-  select2ify: function() {
-    $('#'+this.get('elementId')).select2();
-  }.observes('selection')
+  didInsertElement: function() {
+    this._super();
+    Ember.run.scheduleOnce('afterRender', this, function() {
+      $('#'+this.get('elementId')).select2();
+    });
+  }
 });
