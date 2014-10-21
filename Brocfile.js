@@ -27,4 +27,6 @@ app.import('bower_components/pure/grids-responsive-min.css');
 app.import('bower_components/select2/select2.js');
 app.import('bower_components/select2/select2.css');
 
+app.import('bower_components/JavaScript-MD5/js/md5.min.js');
+
 module.exports = app.toTree();

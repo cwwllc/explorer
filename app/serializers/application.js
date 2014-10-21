@@ -9,11 +9,18 @@ export default DS.JSONSerializer.extend({
   },
 
   extractSingle: function(store, type, payload) {
-    payload.id = payload.source + payload.name + payload.federal_register_notice + payload.start_date + payload.end_date;
+    var that = this;
+
+    if (!payload.id) {
+      payload.id = this.generateId(type, payload);
+    }
 
     if (payload.addresses) {
       payload.addresses = payload.addresses.map(function(a) {
-        a.id = a.address + a.city + a.state + a.postal_code + a.country;
+        // TODO find a way to convert model name to Ember type here.
+        if (!a.id) {
+          a.id = that.generateId('explorer@model:address:', a);
+        }
         store.push('address', a);
         return a.id;
       });
@@ -21,7 +28,9 @@ export default DS.JSONSerializer.extend({
 
     if (payload.ids) {
       payload.ids = payload.ids.map(function(id) {
-        id.id = id.type + id.number + id.country + id.issue_date + id.expiration_date;
+        if (!id.id) {
+          id.id = that.generateId('explorer@model:identification:', id);
+        }
         store.push('identification', id);
         return id.id;
       });
@@ -34,5 +43,15 @@ export default DS.JSONSerializer.extend({
     if (payload) {
       store.metaForType(type, {total: payload.total});
     }
+  },
+
+  generateId: function(type, payload) {
+    var representation = type;
+    for (var prop in payload) {
+      if (payload.hasOwnProperty(prop) && typeof(payload[prop]) === 'string') {
+        representation += payload[prop];
+      }
+    }
+    return md5(representation);
   }
 });
