@@ -5,7 +5,7 @@ import {
 
 moduleFor('controller:trade-events/index', 'TradeEventsIndexController', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['controller:trade-events']
 });
 
 // Replace this with your real tests.
