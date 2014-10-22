@@ -5,6 +5,13 @@
       {{#if source}}
         <tr><td>Source</td><td>{{source}}</td></tr>
       {{/if}}
+      {{#if start_date}}
+        <tr><td>Start Date</td><td>{{start_date}}</td></tr>
+      {{/if}}
+      {{#if end_date}}
+        <tr><td>End Date</td><td>{{end_date}}</td></tr>
+      {{/if}}
+
       {{#if entity_number}}
         <tr><td>Entity Number</td><td>{{entity_number}}</td></tr>
       {{/if}}
@@ -16,12 +23,6 @@
       {{/if}}
       {{#if federal_register_notice}}
         <tr><td>Federal Register Notice</td><td>{{federal_register_notice}}</td></tr>
-      {{/if}}
-      {{#if start_date}}
-        <tr><td>Start Date</td><td>{{start_date}}</td></tr>
-      {{/if}}
-      {{#if end_date}}
-        <tr><td>End Date</td><td>{{end_date}}</td></tr>
       {{/if}}
       {{#if standard_order}}
         <tr><td>Standard Order</td><td>{{standard_order}}</td></tr>
@@ -118,6 +119,29 @@
           </ol>
         </td></tr>
       {{/if}}
+
+      {{#if event_name}}
+        <tr><td>Event Name</td><td>{{event_name}}</td></tr>
+      {{/if}}
+      {{#if event_type}}
+        <tr><td>Event Type</td><td>{{event_type}}</td></tr>
+      {{/if}}
+      {{#if cost}}
+        <tr><td>Cost</td><td>{{cost}}</td></tr>
+      {{/if}}
+      {{#if cost_currency}}
+        <tr><td>Cost Currency</td><td>{{cost_currency}}</td></tr>
+      {{/if}}
+      {{#if registration_link}}
+        <tr><td>Registration Link</td><td>{{registration_link}}</td></tr>
+      {{/if}}
+      {{#if registration_title}}
+        <tr><td>Registration Title</td><td>{{registration_title}}</td></tr>
+      {{/if}}
+      {{#if description}}
+        <tr><td>Description</td><td>{{description}}</td></tr>
+      {{/if}}
+
     </table>
   {{/with}}
 {{/if}}
