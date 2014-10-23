@@ -9,7 +9,9 @@ export default Ember.Component.extend({
 
   searchHeader: function() {
     var doc = this.get('document');
+
     // TODO this needs to be a property of the document (i.e. of the model).
-    return (doc.get('name') || doc.get('event_name') || doc.get('question'));
+    return (doc.get('name') || doc.get('event_name') || doc.get('question') ||
+      doc.get('source_id') + ' - ' + doc.get('description'));
   }.property('document')
 });
