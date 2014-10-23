@@ -3,9 +3,9 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('trade-event', 'TradeEvent', {
+moduleForModel('contact', 'Contact', {
   // Specify the other units that are required for this test.
-  needs: ['model:contact', 'model:venue']
+  needs: []
 });
 
 test('it exists', function() {

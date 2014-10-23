@@ -36,6 +36,26 @@ export default DS.JSONSerializer.extend({
       });
     }
 
+    if (payload.contacts) {
+      payload.contacts = payload.contacts.map(function(c) {
+        if (!c.id) {
+          c.id = that.generateId('explorer@model:contact:', c);
+        }
+        store.push('contact', c);
+        return c.id;
+      });
+    }
+
+    if (payload.venues) {
+      payload.venues = payload.venues.map(function(v) {
+        if (!v.id) {
+          v.id = that.generateId('explorer@model:venue:', v);
+        }
+        store.push('venue', v);
+        return v.id;
+      });
+    }
+
     return payload;
   },
 
