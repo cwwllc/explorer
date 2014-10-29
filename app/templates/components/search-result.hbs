@@ -220,6 +220,25 @@
         </td></tr>
       {{/if}}
 
+      {{#if question}}
+        <tr><td>Question</td><td>{{question}}</td></tr>
+      {{/if}}
+       {{#if answer}}
+        <tr><td>Answer</td><td>{{answer}}</td></tr>
+      {{/if}}
+      {{#if update_date}}
+        <tr><td>Update Date</td><td>{{update_date}}</td></tr>
+      {{/if}}
+      {{#if topic}}
+        <tr><td>Topic</td><td>{{topic}}</td></tr>
+      {{/if}}
+      {{#if industry}}
+        <tr><td>Industry</td><td>{{industry}}</td></tr>
+      {{/if}}
+      {{#if country}}
+        <tr><td>Country</td><td>{{country}}</td></tr>
+      {{/if}}
+
     </table>
   {{/with}}
 {{/if}}

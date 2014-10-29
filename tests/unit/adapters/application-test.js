@@ -26,10 +26,10 @@ test('buildUrl: query arguments', function() {
 
 test('buildUrl: supported model types', function() {
   var adapter = this.subject(),
-    type = 'explorer@model:parature-faq-entry:';
+    type = 'explorer@model:faqs:';
   equal(
     adapter.buildUrl(type, {}),
-    'http://localhost:3000/parature_faq/search'
+    'http://localhost:3000/faqs/search'
   );
 
   throws(

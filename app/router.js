@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('consolidated-screening-list-entries', function(){});
   this.resource('trade-events', function(){});
+  this.resource('faqs', function(){});
 });
 
 export default Router;
