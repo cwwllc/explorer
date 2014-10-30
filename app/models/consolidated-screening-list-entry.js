@@ -30,5 +30,9 @@ export default DS.Model.extend({
   programs: DS.attr('array'),
 
   addresses: DS.hasMany('address'),
-  identifications: DS.hasMany('identification')
+  identifications: DS.hasMany('identification'),
+
+  searchResultHeader: function() {
+    return this.get('name');
+  }.property('name')
 });

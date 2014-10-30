@@ -26,5 +26,9 @@ export default DS.Model.extend({
   city: DS.attr('string'),
   venue: DS.attr('string'),
 
-  contacts: DS.hasMany('contact')
+  contacts: DS.hasMany('contact'),
+
+  searchResultHeader: function() {
+    return this.get('event_name');
+  }.property('event_name')
 });
