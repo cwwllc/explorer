@@ -37,5 +37,9 @@ export default DS.Model.extend({
   alt_annual_rates: DS.attr('array'),
 
   countries: DS.attr('string'),
-  source: DS.attr('string')
+  source: DS.attr('string'),
+
+  searchResultHeader: function() {
+    return this.get('source_id') + ' - ' + this.get('description');
+  }.property('source_id', 'description')
 });

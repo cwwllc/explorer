@@ -8,5 +8,9 @@ export default DS.Model.extend({
 
   topic: DS.attr('string'),
   industry: DS.attr('string'),
-  country: DS.attr('string')
+  country: DS.attr('string'),
+
+  searchResultHeader: function() {
+    return this.get('question');
+  }.property('question')
 });
