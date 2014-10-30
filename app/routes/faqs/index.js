@@ -8,7 +8,6 @@ export default Ember.Route.extend({
 
     return this.store.find('faqs', {
       q: p.q,
-      countries: p.countries,
       page: p.page
     });
   }
