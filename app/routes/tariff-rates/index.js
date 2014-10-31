@@ -8,7 +8,6 @@ export default Ember.Route.extend({
 
     return this.store.find('tariff-rate', {
       q: p.q,
-      countries: p.countries,
       sources: p.sources,
       page: p.page
     });
