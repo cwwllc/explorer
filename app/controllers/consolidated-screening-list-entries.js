@@ -8,9 +8,9 @@ export default Ember.ArrayController.extend({
 
   countries: null,
   countriesField: function() {
-    var sources = String(this.get('countries')).split(',');
+    var countries = String(this.get('countries')).split(',');
     var selected = this.get('countryList').filter(function(item) {
-      return sources.find(function(given) {
+      return countries.find(function(given) {
         return (item.value === given);
       });
     });
