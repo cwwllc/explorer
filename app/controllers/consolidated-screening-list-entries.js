@@ -39,8 +39,8 @@ export default Ember.ArrayController.extend({
     {value: 'ISN', label: 'Nonproliferation Sanctions (ISN) - State Department'},
     {value: 'PLC', label: 'Palestinian Legislative Council List (PLC) - Treasury Department'},
     {value: 'SSI', label: 'Sectoral Sanctions Identifications List (SSI) - Treasury Department'},
-    {value: 'SDN', label: 'Special Designated Nationals (SDN) - Treasury Department'},
-    {value: 'UVL', label: 'Unverified List - Bureau of Industry and Security'}
+    {value: 'SDN', label: 'Specially Designated Nationals (SDN) - Treasury Department'},
+    {value: 'UVL', label: 'Unverified List (UVL) - Bureau of Industry and Security'}
   ],
 
   countryList: [
