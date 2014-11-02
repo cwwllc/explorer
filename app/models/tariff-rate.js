@@ -33,8 +33,8 @@ export default DS.Model.extend({
   quota_name: DS.attr('string'),
   industry: DS.attr('string'),
 
-  annual_rates: DS.attr('array'),
-  alt_annual_rates: DS.attr('array'),
+  annual_rates: DS.hasMany('annual-rate'),
+  alt_annual_rates: DS.hasMany('annual-rate'),
 
   countries: DS.attr('string'),
   source: DS.attr('string'),

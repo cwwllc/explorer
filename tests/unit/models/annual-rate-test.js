@@ -3,8 +3,9 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('tariff-rate', 'TariffRate', {
-  needs: ['model:annual-rate']
+moduleForModel('annual-rate', 'AnnualRate', {
+  // Specify the other units that are required for this test.
+  needs: []
 });
 
 test('it exists', function() {

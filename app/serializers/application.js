@@ -56,6 +56,23 @@ export default DS.JSONSerializer.extend({
       });
     }
 
+    ['annual_rates', 'alt_annual_rates'].forEach(function(item) {
+      var annualRates;
+      if (payload[item]) {
+        annualRates = [];
+        for (var year in payload[item]) {
+          if (!payload[item].hasOwnProperty(year)) { continue; }
+
+          var annualRate = {year: year, value: payload[item][year]};
+          annualRate.id = that.generateId('explorer@model:annual-rate:', annualRate);
+
+          store.push('annual-rate', annualRate);
+          annualRates.push(annualRate.id);
+        }
+        payload[item] = annualRates;
+      }
+    });
+
     return payload;
   },
 

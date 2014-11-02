@@ -327,8 +327,24 @@
           <tr><td>Quota name</td><td>{{quota_name}}</td></tr>
       {{/if}}
 
-      {{search-result-row-list label="Annual rates" items=annual_rates}}
-      {{search-result-row-list label="Annual rates (alternative)" items=alt_annual_rates}}
+      {{#if annual_rates}}
+        <tr><td>Annual Rates</td><td>
+          <ul>
+          {{#each ar in annual_rates}}
+            <li>{{ar.year}}: {{ar.value}}</li>
+          {{/each}}
+          </ul>
+        </td></tr>
+      {{/if}}
+      {{#if alt_annual_rates}}
+        <tr><td>Annual Rates (alternative)</td><td>
+          <ul>
+          {{#each ar in alt_annual_rates}}
+            <li>{{ar.year}}: {{ar.value}}</li>
+          {{/each}}
+          </ul>
+        </td></tr>
+      {{/if}}
 
       {{#if countries}}
           <tr><td>Countries</td><td>{{countries}}</td></tr>
