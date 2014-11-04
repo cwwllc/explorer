@@ -6,6 +6,7 @@ import {
 moduleFor('controller:trade-leads/index', 'TradeLeadsIndexController', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
+  needs: ['controller:trade-leads']
 });
 
 // Replace this with your real tests.
