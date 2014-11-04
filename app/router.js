@@ -9,6 +9,7 @@ Router.map(function() {
   this.resource('trade-events', function(){});
   this.resource('faqs', function(){});
   this.resource('tariff-rates', function(){});
+  this.resource('trade-leads', function(){});
 });
 
 export default Router;

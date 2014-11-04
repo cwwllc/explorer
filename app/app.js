@@ -12,3 +12,4 @@ var App = Ember.Application.extend({
 loadInitializers(App, 'explorer');
 
 export default App;
+
