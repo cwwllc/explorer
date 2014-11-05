@@ -10,6 +10,7 @@ Router.map(function() {
   this.resource('faqs', function(){});
   this.resource('tariff-rates', function(){});
   this.resource('trade-leads', function(){});
+  this.resource('market-research-library', function(){});
 });
 
 export default Router;
