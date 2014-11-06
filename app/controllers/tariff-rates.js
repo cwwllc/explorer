@@ -24,6 +24,7 @@ export default Ember.Controller.extend({
     {value: 'AUSTRALIA', label: 'FTA Australia Tariff Rates'},
     {value: 'COSTA_RICA', label: 'FTA Costa Rica Tariff Rates'},
     {value: 'EL_SALVADOR', label: 'FTA El Salvador Tariff Rates'},
+    {value: 'GUATEMALA', label: 'FTA Guatemala Tariff Rates'},
     {value: 'KOREA', label: 'FTA South Korea Tariff Rates'}
   ],
 });
