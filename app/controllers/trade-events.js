@@ -35,7 +35,8 @@ export default Ember.Controller.extend({
     {value: 'ITA', label: 'ITA'},
     {value: 'SBA', label: 'SBA'},
     {value: 'EXIM', label: 'EXIM'},
-    {value: 'USTDA', label: 'USTDA'}
+    {value: 'USTDA', label: 'USTDA'},
+    {value: 'DL', label: 'DL'}
   ],
 
   countryList: [
