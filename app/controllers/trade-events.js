@@ -32,11 +32,11 @@ export default Ember.Controller.extend({
   pageField: Ember.computed.oneWay('pageField'),
 
   sourceList: [
-    {value: 'ITA', label: 'ITA'},
-    {value: 'SBA', label: 'SBA'},
-    {value: 'EXIM', label: 'EXIM'},
-    {value: 'USTDA', label: 'USTDA'},
-    {value: 'DL', label: 'DL'}
+    {value: 'DL', label: 'Department of State Direct Line'},
+    {value: 'EXIM', label: 'Export-Import Bank'},
+    {value: 'ITA', label: 'International Trade Administration'},
+    {value: 'SBA', label: 'Small Business Administration'},
+    {value: 'USTDA', label: 'U.S. Trade and Development Agency'}
   ],
 
   countryList: [

@@ -173,12 +173,7 @@
           <ol>
           {{#each contact in contacts}}
             <li><ul>
-              {{#if contact.first_name}}
-                <li>{{contact.first_name}}</li>
-              {{/if}}
-              {{#if contact.last_name}}
-                <li>{{contact.last_name}}</li>
-              {{/if}}
+              <li>{{contact.first_name}} {{contact.last_name}}</li>
               {{#if contact.post}}
                 <li>{{contact.post}}</li>
               {{/if}}
