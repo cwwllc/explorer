@@ -11,6 +11,7 @@ Router.map(function() {
   this.resource('tariff-rates', function(){});
   this.resource('trade-leads', function(){});
   this.resource('market-research-library', function(){});
+  this.resource('ita-office-locations', function(){});
 });
 
 export default Router;

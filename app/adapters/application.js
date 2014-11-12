@@ -44,6 +44,7 @@ export default DS.RESTAdapter.extend({
       'explorer@model:tariff-rate:': 'tariff_rates',
       'explorer@model:trade-leads:': 'trade_leads',
       'explorer@model:market-research-library:': 'market_research_library',
+      'explorer@model:ita-office-locations:': 'ita_office_locations',
     };
     var path = supported[type];
 
