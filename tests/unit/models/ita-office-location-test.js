@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForModel('ita-office-locations', 'ItaOfficeLocations', {
+moduleForModel('ita-office-location', 'ItaOfficeLocation', {
   // Specify the other units that are required for this test.
   needs: []
 });

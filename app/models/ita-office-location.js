@@ -4,9 +4,9 @@ export default DS.Model.extend({
 
   post: DS.attr('string'),
   office_name: DS.attr('string'),
-  country: DS.attr('array'),
+  country: DS.attr('string'),
   state: DS.attr('string'),
-  
+
   address: DS.attr('array'),
 
   email: DS.attr('string'),
