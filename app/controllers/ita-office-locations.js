@@ -7,18 +7,10 @@ export default Ember.Controller.extend({
   qField: Ember.computed.oneWay('q'),
 
   country: null,
-  countryField: function() {
-    var given = this.get('country');
-    var selected = this.get('countryList').find(function(item) {
-      return (item.value === given);
-    });
-    return selected;
-  }.property('country'),
-
+  countryField: Ember.computed.oneWay('country'),
 
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
-
 
   countryList: [
     {label: 'Afghanistan', value: 'AF'},

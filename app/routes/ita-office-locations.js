@@ -9,10 +9,7 @@ export default Ember.Route.extend({
 
   actions: {
     search: function(page) {
-      var countryField = this.controller.get('countryField');
-      var country = countryField ? countryField.value : "";
-
-      this.controller.set('country', country);
+      this.controller.set('country', this.controller.get('countryField'));
       this.controller.set('q', this.controller.get('qField'));
       this.controller.set('page', (page || 1));
     }
