@@ -28,9 +28,9 @@ git checkout gh-pages
 git pull --rebase
 ls -1 | grep -v -E '^dist|bower_components|node_modules|tmp$' | xargs rm -rf
 mv dist/* ./
-rmdir dist
 
 # Add everything and push it.
-git commit -am "Update."
+git add .
+git commit -m "Update."
 git push origin gh-pages
 git checkout master
