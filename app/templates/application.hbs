@@ -1,27 +1,56 @@
-<div id="layout">
-  <!-- Menu toggle -->
-  <a href="#menu" id="menuLink" class="menu-link">
-    <!-- Hamburger icon -->
-    <span></span>
-  </a>
 
-  <div id="menu">
-    <div class="pure-menu pure-menu-open">
-      {{#link-to "index" class="pure-menu-heading"}}{{title}}{{/link-to}}
-      <h3>Available APIs</h3>
-      <ul>
-        <li>{{#link-to "consolidated-screening-list-entries"}}CSL{{/link-to}}</li>
-        <li>{{#link-to "trade-events"}}Trade Events{{/link-to}}</li>
-        <li>{{#link-to "faqs"}}FAQs{{/link-to}}</li>
-        <li>{{#link-to "tariff-rates"}}Tariff Rates{{/link-to}}</li>
-        <li>{{#link-to "trade-leads"}}Trade Leads{{/link-to}}</li>
-        <li>{{#link-to "market-research-library"}}Market Research Library{{/link-to}}</li>
-        <li>{{#link-to "ita-office-locations"}}ITA Office Locations{{/link-to}}</li>
-      </ul>
-    </div>
-  </div>
 
-  <div id="main">
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/styles.css">
+    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+      <a href="/" style="text-decoration:none;"><img   src="http://developer.trade.gov/images/trade_url_white2.png"  ></a>
+        
+        </br></br>
+    <h3>Available APIs</h3>
+        <p class="view"><a href="http://developer.trade.gov/market-research-library.html">Market Research Library</a></p>
+        <!--<p class="view"><a href="csl.html">Consolidated Screening List</a></p>-->
+        <p class="view"><a href="http://developer.trade.gov/trade-events.html">Trade Events</a></p>
+        <p class="view"><a href="http://developer.trade.gov/trade-leads.html">Trade Leads</a></p>
+        <p class="view"><a href="http://developer.trade.gov/ita-office-locations.html">ITA Offices & Centers</a></p>
+        <p class="view"><a href="http://developer.trade.gov/trade-news-articles.html">Trade News & Articles</a></p>
+    </br>
+    <h3>Additional Resources</h3>
+    <p class="view"><a href="http://developer.trade.gov/about-apis.html">About Our APIs</a></p>
+        <p class="view"><a href="http://developer.trade.gov/app-gallery.html">App Gallery</a></p>
+        <p class="view"><a href="http://developer.trade.gov/faq.html">FAQs</a></p>
+        <p class="view"><a href="http://developer.trade.gov/change-log.html">Change Log</a></p>
+        <p class="view"><a href="http://developer.trade.gov/tos.html">Terms of Service</a></p>
+        <p class="view"><a href="http://developer.trade.gov/contact-us.html">Contact Us</a></p>
+
+
+      </header>
+           
+    <section>
+ <div id="main">
     {{outlet}}
   </div>
-</div>
+      </section>
+      <section id="foot">
+       
+        <center><p><small><!--<a href="http://trade.gov/feedback.asp">Website Feedback</a> |-->  <a href="http://www.usa.gov">USA.gov</a> | <a href="http://trade.gov/foia">FOIA</a>  | <a href="http://trade.gov/privacy.asp">Privacy Policy</a>  | <a href="http://trade.gov/endorse.asp">Disclaimer</a>  |
+                    <a href="http://trade.gov/ITAiqs.pdf">Information Quality Guidelines</a></small></p></center>
+                    
+       <p style="font-size:10px;">The <a href="http://www.trade.gov">International Trade Administration</a>, <a href="http://www.commerce.gov">U.S.
+                    Department of Commerce</a>, manages this global trade site to provide access to ITA information on promoting trade and investment, strengthening
+                    the competitiveness of U.S. industry, and ensuring fair trade and compliance with trade laws and agreements. External links to other Internet
+                    sites should not be construed as an endorsement of the views or privacy policies contained therein.</p>
+     
+        </section>
+    </div>
+   </body>
+  </html>
