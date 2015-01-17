@@ -12,6 +12,7 @@ Router.map(function() {
   this.resource('trade-leads', function(){});
   this.resource('market-research-library', function(){});
   this.resource('ita-office-locations', function(){});
+  this.resource('country-commercial-guides', function(){});
 });
 
 export default Router;

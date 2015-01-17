@@ -45,6 +45,7 @@ export default DS.RESTAdapter.extend({
       'explorer@model:trade-leads:': 'trade_leads',
       'explorer@model:market-research-library:': 'market_research_library',
       'explorer@model:ita-office-location:': 'ita_office_locations',
+      'explorer@model:country-commercial-guide:': 'country_commercial_guides',
     };
     var path = supported[type];
 
