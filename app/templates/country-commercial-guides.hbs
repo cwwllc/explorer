@@ -1,17 +1,15 @@
-<div class="header">
-  
-</div>
+
 <div class="content">
   <form class="pure-form pure-form-stacked search" {{action "search" on="submit"}}>
     <fieldset>
-      <div class="pure-u-1  pure-u-md-1">
-          <label for="sources">Sources</label>
+        <div class="pure-u-1 pure-u-md-11-24 industries">
+          <label for="industries">Industries</label>
           {{view "select2"
-            content=sourceList
-            selection=sourcesField
+            content=industryList
+            selection=industriesField
             optionValuePath="content.value"
             optionLabelPath="content.label"
-            id="sources"
+            id="industries"
             class="pure-input-1"
             multiple=true}}
         </div>
@@ -26,7 +24,19 @@
             class="pure-input-1"
             multiple=true}}
         </div>
-        <div class="pure-u-1 pure-u-md-11-24 sources">
+          <div class="pure-u-1 pure-u-md-11-24 topics">
+          <label for="topics">Topics</label>
+          {{view "select2"
+            content=topicList
+            selection=topicsField
+            optionValuePath="content.value"
+            optionLabelPath="content.label"
+            id="topics"
+            class="pure-input-1"
+            multiple=true}}
+        </div>
+
+        <div class="pure-u-1  sources">
         {{input type="submit" value="Generate Report" class="pure-u-1 pure-u-md-11-24 pure-button pure-button-primary"}}
         </div>
       </div>

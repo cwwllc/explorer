@@ -10,6 +10,8 @@ export default Ember.Route.extend({
       q: p.q,
       countries: p.countries,
       sources: p.sources,
+      industries: p.industries,
+      topics: p.topics,
       page: p.page
     });
   }
