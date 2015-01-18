@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     return this.store.find('country-commercial-guide', {
       q: p.q,
       countries: p.countries,
-      industries: p.industries,
+      sources: p.sources,
       page: p.page
     });
   }

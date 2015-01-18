@@ -4,16 +4,16 @@ export default Ember.Route.extend({
   queryParams: {
     q: { refreshModel: true },
     countries: { refreshModel: true },
-    industries: { refreshModel: true },
+    sources: { refreshModel: true },
     page: { refreshModel: true }
   },
 
   actions: {
     search: function(page) {
       var countries,
-        industries,
+        sources,
         countriesField = this.controller.get('countriesField'),
-        industriesField = this.controller.get('industriesField');
+        sourcesField = this.controller.get('sourcesField');
 
       if (countriesField) {
         countries = countriesField.map(function(item) {
@@ -22,12 +22,12 @@ export default Ember.Route.extend({
       }
       this.controller.set('countries', countries);
 
-      if (industriesField) {
-        industries = industriesField.map(function(item) {
+      if (sourcesField) {
+        sources = sourcesField.map(function(item) {
           return item.value;
         });
       }
-      this.controller.set('industries', industries);
+      this.controller.set('sources', sources);
 
       this.controller.set('q', this.controller.get('qField'));
       this.controller.set('page', (page || 1));
