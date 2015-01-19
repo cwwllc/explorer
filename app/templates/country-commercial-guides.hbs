@@ -2,8 +2,8 @@
 <div class="content">
   <form class="pure-form pure-form-stacked search" {{action "search" on="submit"}}>
     <fieldset>
-        <div class="pure-u-1 pure-u-md-11-24 industries">
-          <label for="industries">Industries</label>
+        <div class="pure-u-1  industries">
+          <label for="industries">Industry</label>
           {{view "select2"
             content=industryList
             selection=industriesField
@@ -13,8 +13,8 @@
             class="pure-input-1"
             multiple=true}}
         </div>
-        <div class="pure-u-1 pure-u-md-11-24 countries">
-          <label for="countries">Countries</label>
+        <div class="pure-u-1  countries">
+          <label for="countries">Country</label>
           {{view "select2"
             content=countryList
             selection=countriesField
@@ -24,8 +24,8 @@
             class="pure-input-1"
             multiple=true}}
         </div>
-          <div class="pure-u-1 pure-u-md-11-24 topics">
-          <label for="topics">Topics</label>
+          <div class="pure-u-1  topics">
+          <label for="topics">Trade Issues</label>
           {{view "select2"
             content=topicList
             selection=topicsField

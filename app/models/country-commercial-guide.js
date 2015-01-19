@@ -10,6 +10,6 @@ export default DS.Model.extend({
 
 
   searchResultHeader: function() {
-    return this.get('pdf_section');
-  }.property('pdf_section')
+    return this.get('section_title');
+  }.property('section_title')
 });

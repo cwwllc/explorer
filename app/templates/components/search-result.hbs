@@ -318,23 +318,11 @@
       {{#if quota_name}}
           <tr><td>Quota name</td><td>{{quota_name}}</td></tr>
       {{/if}}
-      {{#if pdf_title}}
-          <tr><td>PDF Title</td><td>{{pdf_title}}</td></tr>
-      {{/if}}
-      {{#if pdf_chapter}}
-          <tr><td>PDF Chapter</td><td>{{pdf_chapter}}</td></tr>
-      {{/if}}
-      {{#if pdf_section}}
-          <tr><td>PDF Section</td><td>{{pdf_section}}</td></tr>
-      {{/if}}
-      {{#if pdf_url}}
-          <tr><td>PDF URL</td><td>{{pdf_url}}</td></tr>
-      {{/if}}
       {{#if section_title}}
-          <tr><td>Section Title</td><td>{{section_title}}</td></tr>
+          <h3>{{section_title}}</h3>
       {{/if}}
       {{#if section_url}}
-          <tr><td>Section URL</td><td>{{section_url}}</td></tr>
+          {{section_url}}
       {{/if}}
       {{#if Content}}
           <tr><td>Content</td><td>{{Content}}</td></tr>
