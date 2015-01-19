@@ -14,9 +14,11 @@ export default Ember.Route.extend({
       var countries,
         sources,
         industries,
+        topics,
         countriesField = this.controller.get('countriesField'),
-        sourcesField = this.controller.get('sourcesField');
-        industriesField = this.controller.get('industriesField');
+        sourcesField = this.controller.get('sourcesField'),
+        industriesField = this.controller.get('industriesField'),
+        topicsField = this.controller.get('topicsField');
 
       if (countriesField) {
         countries = countriesField.map(function(item) {
@@ -38,6 +40,13 @@ export default Ember.Route.extend({
         });
       }
       this.controller.set('industries', industries);
+
+      if (topicsField) {
+        topics = topicsField.map(function(item) {
+          return item.value;
+        });
+      }
+      this.controller.set('topics', topics);
 
       this.controller.set('q', this.controller.get('qField'));
       this.controller.set('page', (page || 1));
