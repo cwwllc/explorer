@@ -1,67 +1,100 @@
 
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  
-    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/explorer.css">
-    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Market Intelligence | Dynamic Report Generator</title>
+  <meta name="description" content="Things that came in my mind...
+" />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="canonical" href="http://blog.base68.com/">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="http://ajsingh273.github.io/ccg/stylesheets/styles.css rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="http://blog.base68.com/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="http://blog.base68.com/css/print.css" />
+</head>
+
+
   <body>
-    <div class="wrapper">
-      <header>
-      <a href="http://developer.trade.gov/" style="text-decoration:none;"><img   src="http://developer.trade.gov/images/trade_url_white2.png"  width="210" alt="logo"></a>
-        
-        </br></br>
-    <h3>Available APIs</h3>
-        <p class="view"><a href="http://developer.trade.gov/market-research-library.html">Market Research Library</a></p>
-        <p class="view"><a href="http://developer.trade.gov/consolidated-screening-list.html">Consolidated Screening List</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-events.html">Trade Events</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-leads.html">Trade Leads</a></p>
-        <p class="view"><a href="http://developer.trade.gov/ita-office-locations.html">ITA Offices & Centers</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-news-articles.html">Trade News & Articles</a></p>
-    </br>
-    <h3>Additional Resources</h3>
-    <p class="view"><a href="http://developer.trade.gov/guidance.html">Guidance</a></p>
-        <p class="view"><a href="http://developer.trade.gov/app-gallery.html">App Gallery</a></p>
-        <p class="view"><a href="http://developer.trade.gov/faq.html">FAQs</a></p>
-        <p class="view"><a href="http://developer.trade.gov/change-log.html">Change Log</a></p>
-        <p class="view"><a href="http://developer.trade.gov/tos.html">Terms of Service</a></p>
-        <p class="view"><a href="http://developer.trade.gov/contact-us.html">Contact Us</a></p>
 
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="teaserimage" style="height:350px;"> 
+    <div class="teaserimage-image" style="background-image: url(http://ajsingh273.github.io/ccg/books3.jpg);">
+    </div>
 
-      </header>
-           
-    <section>
-    <div class="dropdown">
-  <input class="dropdown-toggle" type="text">
-  <div class="dropdown-text">Search APIs</div>
-  <ul class="dropdown-content">
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/market-research-library">Market Research Library</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/consolidated-screening-list-entries">Consolidated Screening List</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/trade-events">Trade Events</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/trade-leads">Trade Leads</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/ita-office-locations">ITA Offices & Centers</a></li>
-  </ul>
 </div>
+
+<main class="content" role="main">
+
+<!-- Explorer outlet -->
+
+
  <div id="main">
     {{outlet}}
   </div>
-      </section>
-      <section id="foot">
-       
-        <center><p><small><!--<a href="http://trade.gov/feedback.asp">Website Feedback</a> |-->  <a href="http://www.usa.gov">USA.gov</a> | <a href="http://trade.gov/foia">FOIA</a>  | <a href="http://trade.gov/privacy.asp">Privacy Policy</a>  | <a href="http://trade.gov/endorse.asp">Disclaimer</a>  |
-                    <a href="http://trade.gov/ITAiqs.pdf">Information Quality Guidelines</a></small></p></center>
-                    
-       <p style="font-size:10px;">The <a href="http://www.trade.gov">International Trade Administration</a>, <a href="http://www.commerce.gov">U.S.
-                    Department of Commerce</a>, manages this global trade site to provide access to ITA information on promoting trade and investment, strengthening
-                    the competitiveness of U.S. industry, and ensuring fair trade and compliance with trade laws and agreements. External links to other Internet
-                    sites should not be construed as an endorsement of the views or privacy policies contained therein.</p>
-     
-        </section>
+
+
+</main>
+
+      </div>
     </div>
-   </body>
-  </html>
+
+
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://blog.base68.com/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="http://blog.base68.com/assets/js/index.js"></script>
+<script type="text/javascript" src="http://blog.base68.com/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+    $window.on('scroll', function() {
+      var top = $window.scrollTop();
+
+      if (top < 0 || top > 1500) { return; }
+      $image
+        .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+        .css('opacity', 1-Math.max(top/700, 0));
+    });
+    $window.trigger('scroll');
+
+    var height = $('.article-image').height();
+    $('.post-content').css('padding-top', height + 'px');
+
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+       && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({ scrollTop: target.offset().top }, 500);
+          return false;
+        }
+      }
+    });
+  });
+}(jQuery));
+</script>
+
+
+
+  </body>
+
+</html>
