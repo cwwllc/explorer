@@ -1,7 +1,7 @@
 Explorer--ITA
 =============
 
-Simple webapp allowing users to explore the GovWizely webservices API.
+Simple webapp allowing users to explore the ITA webservices API.
 
 ## Development Environment
 
