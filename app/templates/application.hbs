@@ -1,67 +1,82 @@
 
+{{#if showCcg}}
 
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  
-    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/explorer.css">
-    <link rel="stylesheet" href="http://developer.trade.gov/stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  </head>
-  <body>
-    <div class="wrapper">
+  <div id="country-commercial-guides">
+    {{#unless showCcgReport}}
       <header>
-      <a href="http://developer.trade.gov/" style="text-decoration:none;"><img   src="http://developer.trade.gov/images/trade_url_white2.png"  width="210" alt="logo"></a>
-        
-        </br></br>
-    <h3>Available APIs</h3>
-        <p class="view"><a href="http://developer.trade.gov/market-research-library.html">Market Research Library</a></p>
-        <p class="view"><a href="http://developer.trade.gov/consolidated-screening-list.html">Consolidated Screening List</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-events.html">Trade Events</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-leads.html">Trade Leads</a></p>
-        <p class="view"><a href="http://developer.trade.gov/ita-office-locations.html">ITA Offices & Centers</a></p>
-        <p class="view"><a href="http://developer.trade.gov/trade-news-articles.html">Trade News & Articles</a></p>
-    </br>
-    <h3>Additional Resources</h3>
-    <p class="view"><a href="http://developer.trade.gov/guidance.html">Guidance</a></p>
-        <p class="view"><a href="http://developer.trade.gov/app-gallery.html">App Gallery</a></p>
-        <p class="view"><a href="http://developer.trade.gov/faq.html">FAQs</a></p>
-        <p class="view"><a href="http://developer.trade.gov/change-log.html">Change Log</a></p>
-        <p class="view"><a href="http://developer.trade.gov/tos.html">Terms of Service</a></p>
-        <p class="view"><a href="http://developer.trade.gov/contact-us.html">Contact Us</a></p>
-
-
+      <h1>Search ITA Market Intelligence</h1>
+      <a href="http://govwizely.github.io/content-explorer/#/lock-downs" style="float:right;margin-top:-100px;">Registered User</a>
       </header>
-           
-    <section>
-    <div class="dropdown">
-  <input class="dropdown-toggle" type="text">
-  <div class="dropdown-text">Search APIs</div>
-  <ul class="dropdown-content">
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/market-research-library">Market Research Library</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/consolidated-screening-list-entries">Consolidated Screening List</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/trade-events">Trade Events</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/trade-leads">Trade Leads</a></li>
-    <li><a href="http://internationaltradeadministration.github.io/explorer/#/ita-office-locations">ITA Offices & Centers</a></li>
-  </ul>
-</div>
- <div id="main">
-    {{outlet}}
-  </div>
-      </section>
-      <section id="foot">
-       
-        <center><p><small><!--<a href="http://trade.gov/feedback.asp">Website Feedback</a> |-->  <a href="http://www.usa.gov">USA.gov</a> | <a href="http://trade.gov/foia">FOIA</a>  | <a href="http://trade.gov/privacy.asp">Privacy Policy</a>  | <a href="http://trade.gov/endorse.asp">Disclaimer</a>  |
-                    <a href="http://trade.gov/ITAiqs.pdf">Information Quality Guidelines</a></small></p></center>
-                    
-       <p style="font-size:10px;">The <a href="http://www.trade.gov">International Trade Administration</a>, <a href="http://www.commerce.gov">U.S.
-                    Department of Commerce</a>, manages this global trade site to provide access to ITA information on promoting trade and investment, strengthening
-                    the competitiveness of U.S. industry, and ensuring fair trade and compliance with trade laws and agreements. External links to other Internet
-                    sites should not be construed as an endorsement of the views or privacy policies contained therein.</p>
-     
-        </section>
+    {{/unless}}
+    <div id="main">
+      {{outlet}}
     </div>
-   </body>
-  </html>
+  </div>
+
+
+{{else}}
+
+    <div class="wrapper">
+
+
+      <header>
+        <a href="{{unbound developerportalUrl}}"><img src="assets/trade_url_white2.png" width="210" alt="logo"></a>
+        <br/><br/>
+        <h3>API Key</h3>
+        <p class="view"><a href="{{unbound apiKeyUrl}}">Get an API Key</a></p>
+        <br/>
+        <h3>Available APIs</h3>
+        <p class="view"><a href="{{unbound developerportalUrl}}/market-research-library.html">Market Research Library</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/consolidated-screening-list.html">Consolidated Screening List</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/trade-events.html">Trade Events</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/trade-leads.html">Trade Leads</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/tariff-rates.html">Tariff Rates</a></p>
+         <div id="demo-simplest" >
+                          <a class="expander">More APIs</a>
+                          <div class="content">
+                              <p class="view"><a href="{{unbound developerportalUrl}}/ccg.html">Country Commercial Guides</a></p>
+                              <p class="view"><a href="{{unbound developerportalUrl}}/faqs-exporting.html">FAQs on Exporting</a></p>
+                              <p class="view"><a href="{{unbound developerportalUrl}}/ita-office-locations.html">ITA Offices & Centers</a></p>
+                              <p class="view"><a href="{{unbound developerportalUrl}}/ita-trade-articles.html">Trade News & Articles</a></p>
+                          </div>
+                      </div>
+        <br/>
+        <h3>Additional Resources</h3>
+        <p class="view"><a href="{{unbound developerportalUrl}}/guidance.html">Guidance</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/app-gallery.html">App Gallery</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/api-faqs.html">API FAQs</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/change-log.html">Change Log</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/tos.html">Terms of Service</a></p>
+        <p class="view"><a href="{{unbound developerportalUrl}}/contact-us.html">Contact Us</a></p>
+      </header>
+
+
+      <section>
+      <div id="body-content">
+        {{view "select2"
+          content=navItems
+          prompt="Search APIs"
+          selection=selectedSearchApi
+          optionValuePath="content.value"
+          optionLabelPath="content.label"}}
+        <div id="main">
+          {{outlet}}
+        </div>
+      </div>
+      </section>
+
+
+
+      <section id="foot">
+       <center><p><small> <a href="http://www.usa.gov">USA.gov</a> | <a href="http://trade.gov/foia">FOIA</a>  | <a href="http://trade.gov/privacy.asp">Privacy Policy</a>  | <a href="http://trade.gov/endorse.asp">Disclaimer</a>  |
+                  <a href="http://trade.gov/ITAiqs.pdf">Information Quality Guidelines</a></small></p></center>
+
+      <p class="foot">The <a href="http://www.trade.gov">International Trade Administration</a>, <a href="http://www.commerce.gov">U.S.
+                  Department of Commerce</a>, manages this global trade site to provide access to ITA information on promoting trade and investment, strengthening
+                  the competitiveness of U.S. industry, and ensuring fair trade and compliance with trade laws and agreements. External links to other Internet
+                  sites should not be construed as an endorsement of the views or privacy policies contained therein.</p>
+      </section>
+    </div>
+
+
+{{/if}}

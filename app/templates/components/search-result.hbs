@@ -166,7 +166,12 @@
         <tr><td>Country</td><td>{{country}}</td></tr>
       {{/if}}
 
-      {{search-result-row-list label="Industries" items=industries}}
+      {{#if industries.original}}
+        {{search-result-row-list label="Original Industries" items=industries.original}}
+        {{search-result-row-list label="Mapped Industries" items=industries.mapped}}
+      {{else}}
+        {{search-result-row-list label="Industries" items=industries}}
+      {{/if}}
 
       {{#if contacts}}
         <tr><td>Contacts</td><td>
@@ -350,9 +355,6 @@
       {{#if expiration_date}}
           <tr><td>Expiration Date</td><td>{{expiration_date}}</td></tr>
       {{/if}}
-      {{#if industries}}
-          <tr><td>Industries</td><td>{{industries}}</td></tr>
-      {{/if}}
       {{#if report_type}}
           <tr><td>Report Type</td><td>{{report_type}}</td></tr>
       {{/if}}
@@ -380,6 +382,70 @@
           <tr><td>Post Type</td><td>{{post_type}}</td></tr>
       {{/if}}
       {{search-result-row-list label="Address" items=address}}
+
+      {{! ITA Articles }}
+      {{#if short_title}}
+          <tr><td>Short Title</td><td>{{short_title}}</td></tr>
+      {{/if}}
+
+      {{#if summary}}
+          <tr><td>Summary</td><td>{{summary}}</td></tr>
+      {{/if}}
+
+      {{#if creation_date}}
+          <tr><td>Creation Date</td><td>{{creation_date}}</td></tr>
+      {{/if}}
+
+      {{#if release_date}}
+          <tr><td>Release Date</td><td>{{release_date}}</td></tr>
+      {{/if}}
+
+
+      {{search-result-row-list label="Source Agencies" items=source_agencies}}
+      {{search-result-row-list label="Source Business Units" items=source_business_units}}
+      {{search-result-row-list label="Source Offices" items=source_offices}}
+
+      {{#if evergreen}}
+          <tr><td>Evergreen</td><td>{{evergreen}}</td></tr>
+      {{/if}}
+
+      {{#if content}}
+          <tr><td>Content</td><td>{{content}}</td></tr>
+      {{/if}}
+
+      {{#if keyword}}
+          <tr><td>Keyword</td><td>{{keyword}}</td></tr>
+      {{/if}}
+
+      {{search-result-row-list label="Export Phases" items=export_phases}}
+      {{search-result-row-list label="Trade Regions" items=trade_regions}}
+      {{search-result-row-list label="Trade Programs" items=trade_programs}}
+      {{search-result-row-list label="Trade Initiatives" items=trade_initiatives}}
+      {{search-result-row-list label="Geo Regions" items=geo_regions}}
+      {{search-result-row-list label="Geo Subregions" items=geo_subregions}}
+      {{search-result-row-list label="Topics" items=topics}}
+      {{search-result-row-list label="Subtopics" items=sub_topics}}
+
+      {{#if seo_metadata_title}}
+          <tr><td>SEO Metadata Title</td><td>{{seo_metadata_title}}</td></tr>
+      {{/if}}
+
+      {{#if seo_metadata_description}}
+          <tr><td>SEO Metadata Description</td><td>{{seo_metadata_description}}</td></tr>
+      {{/if}}
+
+      {{#if seo_metadata_keyword}}
+          <tr><td>SEO Metadata Keyword</td><td>{{seo_metadata_keyword}}</td></tr>
+      {{/if}}
+
+      {{#if trade_url}}
+          <tr><td>Trade URL</td><td>{{trade_url}}</td></tr>
+      {{/if}}
+
+      {{search-result-row-list label="File URL" items=file_url}}
+      {{search-result-row-list label="Image URL" items=image_url}}
+      {{search-result-row-list label="HTML Source URL" items=url_html_source}}
+      {{search-result-row-list label="XML Source URL" items=url_xml_source}}
 
     </table>
   {{/with}}

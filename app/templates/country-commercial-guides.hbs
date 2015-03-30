@@ -1,8 +1,8 @@
-
 <div class="content">
-  <form class="pure-form pure-form-stacked search" {{action "search" on="submit"}}>
-    <fieldset>
-        <div class="pure-u-1  industries">
+  {{#unless controllers.application.showCcgReport}}
+    <form class="pure-form pure-form-stacked search" {{action "search" on="submit"}}>
+      <fieldset>
+        <div class="pure-u-7-24 industries">
           <label for="industries">Industry</label>
           {{view "select2"
             content=industryList
@@ -13,7 +13,7 @@
             class="pure-input-1"
             multiple=true}}
         </div>
-        <div class="pure-u-1  countries">
+        <div class="pure-u-7-24 countries">
           <label for="countries">Country</label>
           {{view "select2"
             content=countryList
@@ -24,8 +24,8 @@
             class="pure-input-1"
             multiple=true}}
         </div>
-          <div class="pure-u-1  topics">
-          <label for="topics">Trade Issues</label>
+          <div class="pure-u-7-24 topics">
+          <label for="topics">Trade Topics</label>
           {{view "select2"
             content=topicList
             selection=topicsField
@@ -36,11 +36,11 @@
             multiple=true}}
         </div>
 
-        <div class="pure-u-1  sources">
-        {{input type="submit" value="Generate Report" class="pure-u-1 pure-u-md-11-24 pure-button pure-button-primary"}}
+        <div class="pure-u-21-24">
+          {{input type="submit" value="Search" class="pure-u-1 pure-u-md-8-24 pure-button pure-button-primary"}}
         </div>
-      </div>
-    </fieldset>
-  </form>
+      </fieldset>
+    </form>
+  {{/unless}}
   {{outlet}}
 </div>

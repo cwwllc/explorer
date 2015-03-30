@@ -13,6 +13,7 @@ Router.map(function() {
   this.resource('market-research-library', function(){});
   this.resource('ita-office-locations', function(){});
   this.resource('country-commercial-guides', function(){});
+  this.resource('sharepoint-trade-articles', function(){});
 });
 
 export default Router;

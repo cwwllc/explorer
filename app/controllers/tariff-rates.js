@@ -21,10 +21,21 @@ export default Ember.Controller.extend({
   pageField: Ember.computed.oneWay('pageField'),
 
   sourceList: [
-    {value: 'AUSTRALIA', label: 'FTA Australia Tariff Rates'},
-    {value: 'COSTA_RICA', label: 'FTA Costa Rica Tariff Rates'},
-    {value: 'EL_SALVADOR', label: 'FTA El Salvador Tariff Rates'},
-    {value: 'GUATEMALA', label: 'FTA Guatemala Tariff Rates'},
-    {value: 'KOREA', label: 'FTA South Korea Tariff Rates'}
+    {value: 'AU', label: 'Australia'},
+    {value: 'BH', label: 'Bahrain'},
+    {value: 'CL', label: 'Chile'},
+    {value: 'CO', label: 'Colombia'},
+    {value: 'CR', label: 'Costa Rica'},
+    {value: 'DO', label: 'Dominican Republic'},
+    {value: 'SV', label: 'El Salvador'},
+    {value: 'GT', label: 'Guatemala'},
+    {value: 'HN', label: 'Honduras'},
+    {value: 'MA', label: 'Morocco'},
+    {value: 'NI', label: 'Nicaragua'},
+    {value: 'OM', label: 'Oman'},
+    {value: 'PA', label: 'Panama'},
+    {value: 'PE', label: 'Peru'},
+    {value: 'SG', label: 'Singapore'},
+    {value: 'KR', label: 'South Korea'}
   ],
 });

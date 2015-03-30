@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  //needs: ['country-commercial-guides/index'],
+
+  setupController: function(controller) {
+    controller.get('controllers.application').set('showCcg', true);
+  },
+
   queryParams: {
     q: { refreshModel: true },
     countries: { refreshModel: true },

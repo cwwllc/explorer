@@ -5,7 +5,7 @@ import {
 
 moduleFor('controller:country-commercial-guides/index', 'CountryCommercialGuidesIndexController', {
   // Specify the other units that are required for this test.
-  // needs: ['controller:foo']
+  needs: ['controller:country-commercial-guides']
 });
 
 // Replace this with your real tests.

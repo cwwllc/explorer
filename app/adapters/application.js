@@ -39,13 +39,14 @@ export default DS.RESTAdapter.extend({
   path: function(type) {
     var supported = {
       'explorer@model:consolidated-screening-list-entry:': 'consolidated_screening_list',
-      'explorer@model:faqs:': 'faqs',
+      'explorer@model:faqs:': 'ita_faqs',
       'explorer@model:trade-event:': 'trade_events',
       'explorer@model:tariff-rate:': 'tariff_rates',
       'explorer@model:trade-leads:': 'trade_leads',
       'explorer@model:market-research-library:': 'market_research_library',
       'explorer@model:ita-office-location:': 'ita_office_locations',
       'explorer@model:country-commercial-guide:': 'country_commercial_guides',
+      'explorer@model:sharepoint-trade-article:': 'trade_articles'
     };
     var path = supported[type];
 
@@ -57,7 +58,8 @@ export default DS.RESTAdapter.extend({
   },
 
   queryString: function(offset, query) {
-    var params = [], key;
+    var params = ['api_key=' + ENV.webservicesApiKey],
+      key;
 
     if (offset > 0) {
       params.push('offset='+offset);
@@ -65,7 +67,7 @@ export default DS.RESTAdapter.extend({
 
     for (key in query) {
       if (query[key] && query[key] !== 'undefined') {
-        params.push(key+'='+query[key]);
+        params.push(key+'='+encodeURIComponent(query[key]));
       }
     }
 

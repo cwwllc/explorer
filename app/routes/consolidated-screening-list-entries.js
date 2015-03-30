@@ -6,7 +6,9 @@ export default Ember.Route.extend({
     q: { refreshModel: true },
     countries: { refreshModel: true },
     sources: { refreshModel: true },
-    page: { refreshModel: true }
+    page: { refreshModel: true },
+    name: { refreshModel: true },
+    address: { refreshModel: true }
   },
 
   actions: {
@@ -31,6 +33,8 @@ export default Ember.Route.extend({
       this.controller.set('sources', sources);
 
       this.controller.set('q', this.controller.get('qField'));
+      this.controller.set('name', this.controller.get('nameField'));
+      this.controller.set('address', this.controller.get('addressField'));
       this.controller.set('page', (page || 1));
     }
   }
