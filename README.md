@@ -12,7 +12,7 @@ This project uses [ember-cli](http://ember-cli.com). The [cloning an existing pr
 3. `cd explorer && npm install && bower install`
 4. `ember server`
 
-Explorer submits search requests to [GovWizely webservices](https://github.com/GovWizely/webservices). You'll want to have this running locally on port 3000.
+Explorer submits search requests to [ITA webservices](https://github.com/InternationalTradeAdministration/webservices). You'll want to have this running locally on port 3000.
 
 ## Deployment
 
