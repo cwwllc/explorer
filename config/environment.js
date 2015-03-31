@@ -39,7 +39,7 @@ module.exports = function(environment) {
     ENV.locationType = 'hash';
     ENV.webservicesBaseURL = 'http://api.trade.gov/v2';
     ENV.webservicesApiKey = 'VeaYLDhMLX_HwcbEbx27s5r3';
-    ENV.developerportalUrl = 'http://developer.trade.gov/developerportal';
+    ENV.developerportalUrl = 'http://developer.trade.gov';
     ENV.apiKeyUrl = 'https://api.trade.gov';
   }
 
