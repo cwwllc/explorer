@@ -13,7 +13,10 @@ export default Ember.Route.extend({
     trade_regions: { refreshModel: true },
     trade_programs: { refreshModel: true },
     trade_initiatives: { refreshModel: true },
-    page: { refreshModel: true }
+    page: { refreshModel: true },
+    creation_date: { refreshModel: true },
+    release_date: { refreshModel: true },
+    expiration_date: { refreshModel: true },
   },
 
   actions: {
@@ -110,6 +113,33 @@ export default Ember.Route.extend({
       this.controller.set('trade_initiatives', trade_initiatives);
       this.controller.set('q', this.controller.get('qField'));
       this.controller.set('page', (page || 1));
+
+      var creationDateFieldStart = this.controller.get('creationDateFieldStart'),
+        creationDateFieldEnd = this.controller.get('creationDateFieldEnd'),
+        releaseDateFieldStart = this.controller.get('releaseDateFieldStart'),
+        releaseDateFieldEnd = this.controller.get('releaseDateFieldEnd'),
+        expirationDateFieldStart = this.controller.get('expirationDateFieldStart'),
+        expirationDateFieldEnd = this.controller.get('expirationDateFieldEnd');
+
+      var dateRegex = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+
+      if (dateRegex.test(creationDateFieldStart) && dateRegex.test(creationDateFieldEnd)) {
+        this.controller.set('creation_date', creationDateFieldStart + " TO " + creationDateFieldEnd);
+      } else {
+        this.controller.set('creation_date', null);
+      }
+
+      if (dateRegex.test(releaseDateFieldStart) && dateRegex.test(releaseDateFieldEnd)) {
+        this.controller.set('release_date', releaseDateFieldStart + " TO " + releaseDateFieldEnd);
+      } else {
+        this.controller.set('release_date', null);
+      }
+
+      if (dateRegex.test(expirationDateFieldStart) && dateRegex.test(expirationDateFieldEnd)) {
+        this.controller.set('expiration_date', expirationDateFieldStart + " TO " + expirationDateFieldEnd);
+      } else {
+        this.controller.set('expiration_date', null);
+      }
     }
   }
 });

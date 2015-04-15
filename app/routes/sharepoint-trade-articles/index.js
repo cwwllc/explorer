@@ -18,7 +18,10 @@ export default Ember.Route.extend({
       trade_regions: p.trade_regions,
       trade_programs: p.trade_programs,
       trade_initiatives: p.trade_initiatives,
-      page: p.page
+      page: p.page,
+      creation_date: p.creation_date,
+      release_date: p.release_date,
+      expiration_date: p.expiration_date
     });
   }
 });

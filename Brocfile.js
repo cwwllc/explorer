@@ -21,6 +21,11 @@ var app = new EmberApp({
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+app.import('bower_components/jquery-ui/jquery-ui.js');
+app.import('bower_components/jquery-ui/ui/datepicker.js');
+app.import('bower_components/jquery-ui/themes/base/jquery-ui.css');
+
+
 app.import('bower_components/pure/pure-min.css');
 app.import('bower_components/pure/grids-responsive-min.css');
 

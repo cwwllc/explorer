@@ -9,7 +9,10 @@ export default Ember.Route.extend({
     return this.store.find('tariff-rate', {
       q: p.q,
       sources: p.sources,
-      page: p.page
+      page: p.page,
+      final_year: p.final_year,
+      partner_start_year: p.partner_start_year,
+      reporter_start_year: p.reporter_start_year
     });
   }
 });

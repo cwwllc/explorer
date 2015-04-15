@@ -1,10 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'countries', 'sources', 'page'],
+  queryParams: ['q', 'countries', 'sources', 'page', 'start_date', 'end_date'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
+
+    start_date: null,
+  startDateFieldStart: null,
+  startDateFieldEnd: null,
+
+    end_date: null,
+  endDateFieldStart: null,
+  endDateFieldEnd: null,
 
   countries: null,
   countriesField: function() {

@@ -26,7 +26,7 @@ test('buildUrl: query arguments', function() {
 
 test('buildUrl: supported model types', function() {
   var adapter = this.subject(),
-    type = 'explorer@model:faqs:';
+    type = 'explorer@model:ita-faq:';
   equal(
     adapter.buildUrl(type, {}),
     'http://localhost:3000/v2/ita_faqs/search?api_key=cfVhA_8HepggR81yU6yo1KGN'

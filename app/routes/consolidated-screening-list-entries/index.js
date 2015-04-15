@@ -12,7 +12,11 @@ export default Ember.Route.extend({
       sources: p.sources,
       page: p.page,
       name: p.name,
-      address: p.address
+      address: p.address,
+      start_date: p.start_date,
+      end_date: p.end_date,
+      expiration_date: p.expiration_date,
+      issue_date: p.issue_date
     });
   }
 });

@@ -14,8 +14,14 @@ a {
 #search-results {
   table {
     width: 100%;
-    td {
-      vertical-align: top;
+    tr {
+      td {
+        vertical-align: top;
+        &:nth-child(2) {
+          word-wrap: break-word;
+          word-break: break-word;
+        }
+      }
     }
     ol {
       margin: 0;
@@ -25,6 +31,19 @@ a {
       list-style-type: none;
       padding-left: 0;
       margin: 0;
+    }
+    table.identification {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: top;
+      width: auto;
+      tr td {
+        border: 0;
+        padding: 0 1rem 0 0;
+        &:first-child {
+          width: 7rem;
+        }
+      }
     }
   }
 }

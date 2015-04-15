@@ -27,13 +27,14 @@ export default DS.JSONSerializer.extend({
     }
 
     if (payload.ids) {
-      payload.ids = payload.ids.map(function(id) {
+      payload.identifications = payload.ids.map(function(id) {
         if (!id.id) {
           id.id = that.generateId('explorer@model:identification:', id);
         }
         store.push('identification', id);
         return id.id;
       });
+      delete payload.ids;
     }
 
     if (payload.contacts) {

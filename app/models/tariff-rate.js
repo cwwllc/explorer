@@ -32,6 +32,6 @@ export default DS.Model.extend({
   source: DS.attr('string'),
 
   searchResultHeader: function() {
-    return this.get('source_id') + ' - ' + this.get('subheading_description');
-  }.property('source_id', 'subheading_description')
+    return this.get('hs_6') + ' - ' + this.get('subheading_description');
+  }.property('hs_6', 'subheading_description')
 });

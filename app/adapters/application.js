@@ -39,11 +39,11 @@ export default DS.RESTAdapter.extend({
   path: function(type) {
     var supported = {
       'explorer@model:consolidated-screening-list-entry:': 'consolidated_screening_list',
-      'explorer@model:faqs:': 'ita_faqs',
+      'explorer@model:ita-faq:': 'ita_faqs',
       'explorer@model:trade-event:': 'trade_events',
       'explorer@model:tariff-rate:': 'tariff_rates',
-      'explorer@model:trade-leads:': 'trade_leads',
-      'explorer@model:market-research-library:': 'market_research_library',
+      'explorer@model:trade-lead:': 'trade_leads',
+      'explorer@model:market-research-library-entry:': 'market_research_library',
       'explorer@model:ita-office-location:': 'ita_office_locations',
       'explorer@model:country-commercial-guide:': 'country_commercial_guides',
       'explorer@model:sharepoint-trade-article:': 'trade_articles'

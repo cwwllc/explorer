@@ -9,12 +9,12 @@ export default Ember.Controller.extend({
   apiKeyUrl: ENV.apiKeyUrl,
 
   navItems: [
-    { label: "Market Research Library", value: "market-research-library"},
+    { label: "Market Research Library", value: "market-research-library-entries"},
     { label: "Consolidated Screening List", value: "consolidated-screening-list-entries"},
     { label: "Trade Events", value: "trade-events"},
     { label: "Trade Leads", value: "trade-leads"},
     { label: "Tariff Rates", value: "tariff-rates"},
-    { label: "FAQs on Exporting", value: "faqs"},
+    { label: "FAQs on Exporting", value: "ita-faqs"},
     { label: "ITA Offices & Centers", value: "ita-office-locations"},
     { label: "Trade News & Articles", value: "sharepoint-trade-articles"}
   ],

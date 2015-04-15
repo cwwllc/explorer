@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address'],
+  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address', 'start_date', 'end_date', 'expiration_date', 'issue_date'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
@@ -11,6 +11,22 @@ export default Ember.ArrayController.extend({
 
   address: null,
   addressField: Ember.computed.oneWay('address'),
+
+  start_date: null,
+  startDateFieldStart: null,
+  startDateFieldEnd: null,
+
+  end_date: null,
+  endDateFieldStart: null,
+  endDateFieldEnd: null,
+
+  expiration_date: null,
+  expirationDateFieldStart: null,
+  expirationDateFieldEnd: null,
+
+  issue_date: null,
+  issueDateFieldStart: null,
+  issueDateFieldEnd: null,
 
   countries: null,
   countriesField: function() {

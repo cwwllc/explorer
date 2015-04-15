@@ -3,11 +3,24 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   queryParams: ['q', 'countries', 'industries', 'export_phases', 'topics',
     'sub_topics', 'geo_regions', 'geo_subregions', 'trade_regions',
-    'trade_programs', 'trade_initiatives', 'page'
+    'trade_programs', 'trade_initiatives', 'page', 'creation_date', 'release_date',
+    'expiration_date'
   ],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
+
+  creation_date: null,
+  creationDateFieldStart: null,
+  creationDateFieldEnd: null,
+
+  release_date: null,
+  releaseDateFieldStart: null,
+  releaseDateFieldEnd: null,
+
+  expiration_date: null,
+  expirationDateFieldStart: null,
+  expirationDateFieldEnd: null,
 
   industries: null,
   industriesField: function() {
@@ -119,18 +132,16 @@ export default Ember.Controller.extend({
     return selected;
   }.property('trade_initiatives'),
 
-
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
 
-  
   exportPhaseList: [
     {label: 'Expand', value: 'Expand'},
     {label: 'Exporting', value: 'Exporting'},
     {label: 'Learn', value: 'Learn'},
     {label: 'Ready', value: 'Ready'}
   ],
-  
+
   industryList: [
     {label: 'Aerospace & Defense', value: 'Aerospace & Defense'},
     {label: 'Agribusiness', value: 'Agribusiness'},
@@ -158,7 +169,7 @@ export default Ember.Controller.extend({
     {label: 'Travel', value: 'Travel'},
     {label: 'Used & Reconditioned Equipment', value: 'Used & Reconditioned Equipment'}
   ],
-  
+
   topicList: [
     {label: 'Export Training', value: 'Export Training'},
     {label: 'Exporting', value: 'Exporting'},
@@ -172,7 +183,7 @@ export default Ember.Controller.extend({
     {label: 'Trade Regulations', value: 'Trade Regulations'},
     {label: 'Trade Remedies', value: 'Trade Remedies'}
   ],
-  
+
   subTopicList: [
     {label: 'Export Training', value: 'Export Training'},
     {label: 'Automated Export System', value: 'Automated Export System'},
@@ -237,7 +248,7 @@ export default Ember.Controller.extend({
     {label: 'Countervailing Duty Measures', value: 'Countervailing Duty Measures'},
     {label: 'Safeguards', value: 'Safeguards'}
   ],
-  
+
   geoRegionList:[
     {label: 'Africa', value: 'Africa'},
     {label: 'Asia', value: 'Asia'},
@@ -249,7 +260,7 @@ export default Ember.Controller.extend({
     {label: 'Oceania', value: 'Oceania'},
     {label: 'South America', value: 'South America'}
   ],
-  
+
   geoSubregionList: [
     {label: 'North Africa', value: 'North Africa'},
     {label: 'Sub-Saharan Africa', value: 'Sub-Saharan Africa'},
@@ -577,5 +588,4 @@ export default Ember.Controller.extend({
     {label: 'Zambia', value: 'ZM'},
     {label: 'Zimbabwe', value: 'ZW'}
   ]
-  
 });

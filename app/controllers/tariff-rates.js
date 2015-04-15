@@ -1,10 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'sources', 'page'],
+  queryParams: ['q', 'sources', 'page', 'final_year', 'partner_start_year', 'reporter_start_year'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
+
+  final_year: null,
+  finalYearFieldStart: null,
+  finalYearFieldEnd: null,
+
+  partner_start_year: null,
+  partnerYearFieldStart: null,
+  partnerYearFieldEnd: null,
+
+  reporter_start_year: null,
+  reporterYearFieldStart: null,
+  reporterYearFieldEnd: null,
 
   sources: null,
   sourcesField: function() {

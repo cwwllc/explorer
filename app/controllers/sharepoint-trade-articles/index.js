@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-	needs: 'sharepoint-trade-articles',
+  needs: 'sharepoint-trade-articles',
 
   page: Ember.computed.alias('controllers.sharepoint-trade-articles.page'),
 

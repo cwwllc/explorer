@@ -1,10 +1,22 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'countries', 'sources', 'page'],
+  queryParams: ['q', 'countries', 'sources', 'page', 'publish_date', 'end_date', 'publish_date_amended'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
+
+  publish_date: null,
+  publishDateFieldStart: null,
+  publishDateFieldEnd: null,
+
+  end_date: null,
+  endDateFieldStart: null,
+  endDateFieldEnd: null,
+
+  publish_date_amended: null,
+  publishDateAmendedFieldStart: null,
+  publishDateAmendedFieldEnd: null,
 
   countries: null,
   countriesField: function() {
@@ -32,7 +44,10 @@ export default Ember.Controller.extend({
   pageField: Ember.computed.oneWay('pageField'),
 
   sourceList: [
-    {value: 'African Development Bank', label: 'African Development Bank'}
+    {value: 'STATE', label: 'State Department BIDS'},
+    {value: 'CANADA', label: 'Canada'},
+    {value: 'FBO', label: 'FBOpen / FedBizOpps'},
+    {value: 'UK', label: 'United Kingdom'},
   ],
 
   countryList: [
