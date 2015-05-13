@@ -25,7 +25,6 @@ app.import('bower_components/jquery-ui/jquery-ui.js');
 app.import('bower_components/jquery-ui/ui/datepicker.js');
 app.import('bower_components/jquery-ui/themes/base/jquery-ui.css');
 
-
 app.import('bower_components/pure/pure-min.css');
 app.import('bower_components/pure/grids-responsive-min.css');
 
@@ -33,5 +32,15 @@ app.import('bower_components/select2/select2.js');
 app.import('bower_components/select2/select2.css');
 
 app.import('bower_components/JavaScript-MD5/js/md5.min.js');
+
+app.import('vendor/bootstrap/dist/js/bootstrap.min.js');
+app.import('vendor/bootstrap/dist/css/bootstrap.min.css');
+
+app.import('vendor/affix.js');
+app.import('vendor/ie10-viewport-bug-workaround.js');
+app.import('vendor/jquery-xdomainrequest.js');
+app.import('vendor/jquery.autosize.js');
+app.import('vendor/mrl-query.js');
+app.import('vendor/scale.fix.js');
 
 module.exports = app.toTree();

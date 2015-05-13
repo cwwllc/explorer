@@ -5,8 +5,6 @@ export default Ember.Controller.extend({
   title: ENV.appTitle,
   showCcg: false,
   showCcgReport: false,
-  developerportalUrl: ENV.developerportalUrl,
-  apiKeyUrl: ENV.apiKeyUrl,
 
   navItems: [
     { label: "Market Research Library", value: "market-research-library-entries"},

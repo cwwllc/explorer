@@ -1,0 +1,10 @@
+<header id="full">
+  <h3>API Key</h3>
+    <p class="view"><a class="current" href="{{unbound developerportalUrl}}">Get an API Key</a></p>
+  <br/>
+  <h3>Available APIs</h3>
+  {{#each item in availableApisNavItems}}
+    <p class="view"><a href="{{unbound developerportalUrl}}/{{unbound item.path}}">{{item.text}}</a></p>
+  {{/each}}
+  </p>
+</header>
