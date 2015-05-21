@@ -40,6 +40,7 @@ export default DS.Model.extend({
   lead_source: DS.attr('string'),
   min_contract_value: DS.attr('string'),
   max_contract_value: DS.attr('string'),
+  categories: DS.attr('array'),
 
   searchResultHeader: function() {
     return this.get('title');
