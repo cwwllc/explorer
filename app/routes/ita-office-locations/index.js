@@ -8,7 +8,7 @@ export default Ember.Route.extend({
 
     return this.store.find('ita-office-location', {
       q: p.q,
-      countries: p.countries,
+      country: p.country,
       page: p.page
     });
   }

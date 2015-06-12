@@ -45,7 +45,6 @@ export default DS.RESTAdapter.extend({
       'explorer@model:trade-lead:': 'trade_leads',
       'explorer@model:market-research-library-entry:': 'market_research_library',
       'explorer@model:ita-office-location:': 'ita_office_locations',
-      'explorer@model:ita-zip-code:': 'ita_zipcode_to_post',
       'explorer@model:country-commercial-guide:': 'country_commercial_guides',
       'explorer@model:sharepoint-trade-article:': 'trade_articles'
     };

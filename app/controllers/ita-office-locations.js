@@ -1,21 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['q', 'countries', 'page'],
+  queryParams: ['q', 'country', 'page'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
 
-  countries: null,
-  countriesField: function() {
-    var countries = String(this.get('countries')).split(',');
-    var selected = this.get('countryList').filter(function(item) {
-      return countries.find(function(given) {
-        return (item.value === given);
-      });
-    });
-    return selected;
-  }.property('countries'),
+  country: null,
+  countryField: Ember.computed.oneWay('country'),
 
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),
