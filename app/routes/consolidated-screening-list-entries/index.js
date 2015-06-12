@@ -16,7 +16,8 @@ export default Ember.Route.extend({
       start_date: p.start_date,
       end_date: p.end_date,
       expiration_date: p.expiration_date,
-      issue_date: p.issue_date
+      issue_date: p.issue_date,
+      fuzzy_name: p.fuzzy_name
     });
   }
 });

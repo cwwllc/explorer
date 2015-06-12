@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.ArrayController.extend({
-  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address', 'start_date', 'end_date', 'expiration_date', 'issue_date'],
+  queryParams: ['q', 'countries', 'sources', 'page', 'name', 'address', 'start_date', 'end_date', 'expiration_date', 'issue_date', 'fuzzy_name'],
 
   q: null,
   qField: Ember.computed.oneWay('q'),
@@ -49,6 +49,13 @@ export default Ember.ArrayController.extend({
     });
     return selected;
   }.property('sources'),
+
+  fuzzy_name: null,
+  fuzzyNameField: Ember.computed.oneWay('fuzzy_name'),
+
+  fuzzyNameList: [
+    {value: "true", label: 'On'},
+  ],
 
   page: 1,
   pageField: Ember.computed.oneWay('pageField'),

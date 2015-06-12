@@ -14,7 +14,8 @@ export default Ember.Controller.extend({
     { label: "Tariff Rates", value: "tariff-rates"},
     { label: "FAQs on Exporting", value: "ita-faqs"},
     { label: "ITA Offices & Centers", value: "ita-office-locations"},
-    { label: "Trade News & Articles", value: "sharepoint-trade-articles"}
+    { label: "Trade News & Articles", value: "sharepoint-trade-articles"},
+    { label: "Export Assistance Centers", value: "ita-zip-codes"},
   ],
 
   selectedSearchApi: undefined,

@@ -6,9 +6,9 @@ export default Ember.Route.extend({
 
     var p = transition.queryParams;
 
-    return this.store.find('ita-office-location', {
+    return this.store.find('ita-zip_code', {
       q: p.q,
-      countries: p.countries,
+      zip_codes: p.zip_codes,
       page: p.page
     });
   }

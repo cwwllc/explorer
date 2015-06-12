@@ -44,6 +44,8 @@ export default DS.Model.extend({
   vessel_owner: DS.attr('string'),
   vessel_type: DS.attr('string'),
 
+  score: DS.attr('string'),
+
   searchResultHeader: function() {
     return this.get('name');
   }.property('name')

@@ -12,6 +12,18 @@
         {{input class="pure-input-1" value=nameField}}
       </div>
 
+      <div class="pure-u-1 pure-u-md-11-24">
+        <label for="fuzzyName">Fuzzy Name</label>
+        {{view "select2"
+        content=fuzzyNameList
+        value=fuzzyNameField
+        optionValuePath="content.value"
+        optionLabelPath="content.label"
+        prompt="Off"
+        id="fuzzyName"
+        class="pure-input-1"}}
+      </div>
+
       <div class="pure-u-1">
         <label for="address">Address</label>
         {{input class="pure-input-1" value=addressField}}

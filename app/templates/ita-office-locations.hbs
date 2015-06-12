@@ -9,13 +9,13 @@
       <div class="pure-g">
 
         <div class="pure-u-1 pure-u-md-11-24 countries">
-          <label for="country">Country</label>
+          <label for="country">Countries</label>
           {{view "select2"
             content=countryList
-            value=countryField
+            selection=countriesField
             optionValuePath="content.value"
             optionLabelPath="content.label"
-            prompt="All"
+            multiple=true
             id="country"
             class="pure-input-1"}}
         </div>
